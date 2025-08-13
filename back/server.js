@@ -4,29 +4,47 @@ const app = express()
 var cors = require('cors');
 app.use(cors());
 const port = 3000
+const db = require('./db.js')
+db();
+const User = require('./UserSchema');
 const fs = require('fs')
 
 const catsData = JSON.parse(fs.readFileSync('cats.json','utf8'));
-const users = JSON.parse(fs.readFileSync('users.json','utf8'));
 
-app.get('/summon/:user', (req, res) => {
+async function createUser(id) {
+    const user = new User({
+        id: id,
+        name: id === 1 ? "Lucas" : "Alix"
+    });
+
+    await user.save();
+    console.log("Utilisateur créé !");
+}
+
+app.get('/summon/:user', async (req, res) => {
     const userId = parseInt(req.params.user);
-    const user = users.find(u => u.id === userId);
-    const today = new Date().toDateString();
-    const luck = randomInt(100);
-    var rarity = 'basique';
+    let user = await User.findOne({ id: userId });
 
-    if (user.lastreset !== today) {
-        user.attemps = 5;
-        user.lastreset = today;
-        fs.writeFileSync('./users.json', JSON.stringify(users, null, 2));
+    if (!user) {
+        createUser(userId);
+        user = await User.findOne({ id: userId });
+    }
+
+    const todayStr = new Date().toDateString(); // ex: "Wed Aug 14 2025"
+    const lastResetStr = user.lastreset ? new Date(user.lastreset).toDateString() : null;
+
+    if (lastResetStr !== todayStr) {
+        user.attemps = 5; // reset quotidien
+        user.lastreset = new Date(); // on garde la date complète pour info
     }
 
     if (user.attemps === 0) {
         res.json({'attemps': 0});
     } else {
+        const luck = randomInt(100);
+        var rarity = 'basique';
+        console.log(user)
         user.attemps--;
-        fs.writeFileSync('./users.json', JSON.stringify(users, null, 2));
         if (luck >= 95) {
         rarity = 'divin';
         }
@@ -41,13 +59,10 @@ app.get('/summon/:user', (req, res) => {
         const randomIndex = Math.floor(Math.random() * pool.length);
         const randomCat = pool[randomIndex];
 
-        if (user.invocations[randomCat.id]) {
-            user.invocations[randomCat.id]++;
-        } else {
-            user.invocations[randomCat.id] = 1;
-        }
-        fs.writeFileSync('./users.json', JSON.stringify(users, null, 2));
+        const count = user.invocations.get(randomCat.id) || 0;
+        user.invocations.set(randomCat.id, count + 1);
 
+        await user.save();
         res.json(randomCat);
     }
 })
@@ -57,9 +72,9 @@ app.get('/getcat/:id', (req, res) => {
     res.json(catsData.find(cat => cat.id === id));
 })
 
-app.get('/collection/:user', (req, res) => {
+app.get('/collection/:user', async (req, res) => {
     const userId = parseInt(req.params.user);
-    const user = users.find(u => u.id === userId);
+    user = await User.findOne({ id: userId });
 
     res.json(user.invocations);
 })
