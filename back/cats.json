@@ -179,6 +179,111 @@
 {
     "id": "Nalarevives",
     "rarity": "divin"
+},
+
+{
+    "id": "Chabigmac",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakiflop",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakiveupaparler",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakisefaitaper",
+    "rarity": "basique"
+},
+
+{
+    "id": "Charip",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakistalk",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakiregardelhorizon",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chadescalier",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakitombe",
+    "rarity": "legendary"
+},
+
+{
+    "id": "Chakifail",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakihurle",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chaelectrriicien",
+    "rarity": "mythic"
+},
+
+{
+    "id": "Chakisefechier",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakideprime",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chahjevois",
+    "rarity": "legendary"
+},
+
+{
+    "id": "Chalix",
+    "rarity": "legendary"
+},
+
+{
+    "id": "Chakimeur",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakivi",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakiremeur",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakisenva",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakiexplose",
+    "rarity": "basique"
 }
 
 ]
