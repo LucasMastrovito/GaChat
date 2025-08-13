@@ -15,7 +15,7 @@ function Summon() {
     return (
     <div className="summon_container">
          <div className='summon_card'>
-            <img alt="cat" url='https://c.tenor.com/sV0JRnsrjsUAAAAd/tenor.gif'></img>
+            <img alt="cat" url='https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/gifs/chapakonten.gif'></img>
          </div>
         <button className="btn" onClick={summon}>Invoquer</button>
     </div>
