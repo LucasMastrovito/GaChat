@@ -18,6 +18,7 @@ function Summon() {
 
     return (
     <div className="summon_container">
+        <h1>{Data.id}</h1>
          <div className='summon_card'>
             <img className="gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}></img>
          </div>
