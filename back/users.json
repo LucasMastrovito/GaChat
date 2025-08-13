@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Lucas",
+    "attemps": 0,
+    "lastreset": null,
+    "invocations": {
+    }
+  },
+  {
+    "id": 2,
+    "name": "Alix",
+    "attemps": 0,
+    "lastreset": null,
+    "invocations": {
+    }
+  }
+]

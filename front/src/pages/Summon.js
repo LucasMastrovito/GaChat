@@ -4,25 +4,37 @@ import "./Summon.css";
 function Summon() {
     const [Data, setData] = useState({});
     const [Url, setUrl] = useState('');
+    const [attemps, setAttemps] = useState();
 
     console.log(Url)
     const summon = async (e) => {
-        fetch('http://localhost:3000/summon')
+        fetch('https://gachat.onrender.com/summon/' + localStorage.getItem('userId'))
         .then(res => res.json())
         .then(data => {
-            setData(data);
-            console.log(data.id)
-            setUrl(data.id.toLowerCase());
+            if (data.hasOwnProperty('attemps')) {
+                setAttemps("Plus d'essais...");
+            } else {
+                setData(data);
+                console.log(data.id)
+                setUrl(data.id.toLowerCase());
+            }
         });
     }
 
     return (
     <div className="summon_container">
-        <h1>{Data.id}</h1>
-         <div className='summon_card'>
-            <img className="gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}></img>
-         </div>
-        <button className="btn" onClick={summon}>Invoquer</button>
+        {
+            attemps ? 
+            <h1>{attemps}</h1>
+            :
+        <div>
+            <h1 className="name">{Data.id}</h1>
+            <div className='summon_card'>
+                <img className="gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}></img>
+            </div>
+            <button className="btn" onClick={summon}>Invoquer</button>
+        </div>
+        }
     </div>
     )
 }

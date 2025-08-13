@@ -6,8 +6,12 @@
     justify-content: space-evenly;
 }
 
+.name {
+    margin-top: 0vh;
+}
+
 .summon_card {
-    height: 40vh;
+    height: 60vh;
     width: 85vw;
 }
 
@@ -15,4 +19,5 @@
     border: 2px #282c34 solid;
     border-radius: 15px;
     max-width: 85vw;
+    max-height: 60vh;
 }
