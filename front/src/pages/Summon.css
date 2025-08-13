@@ -14,4 +14,5 @@
 .gif {
     border: 2px #282c34 solid;
     border-radius: 15px;
+    max-width: 85vw;
 }
