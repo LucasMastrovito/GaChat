@@ -7,9 +7,11 @@
 }
 
 .summon_card {
-    background-color: powderblue;
     height: 40vh;
+    width: 85vw;
+}
+
+.gif {
     border: 2px #282c34 solid;
     border-radius: 15px;
-    width: 85vw;
 }
