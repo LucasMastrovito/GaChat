@@ -3,44 +3,37 @@
 
 {
     "id": "Putiang",
-    "rarity": "legendary",
-    "link": "https://tenor.com/view/orange-cat-staring-orange-cat-staring-cat-gif-13724146065807985297"
+    "rarity": "legendary"
 },
 
 {
     "id": "Chapakonten",
-    "rarity": "legendary",
-    "link": "https://tenor.com/view/cute-cat-angry-angry-cat-fat-cat-gif-12780381515866148549"
+    "rarity": "legendary"
 },
 
 {
     "id": "Charabe",
-    "rarity": "legendary",
-    "link": "https://tenor.com/fr/view/arab-cat-gif-17552437121878202478"
+    "rarity": "legendary"
 },
 
 {
     "id": "Channiversaire",
-    "rarity": "mythic",
-    "link": "test"
+    "rarity": "mythic"
 },
 
 {
     "id": "Putiang le Bleu",
-    "rarity": "rare",
-    "link": "test"
+    "rarity": "rare"
 },
 
 {
     "id": "Chakidort",
-    "rarity": "basic",
-    "link": "test"
+    "rarity": "basic"
 },
 
 {
     "id": "Chakirock",
-    "rarity": "basic",
-    "link": "test"
+    "rarity": "basic"
 }
 
 ]
