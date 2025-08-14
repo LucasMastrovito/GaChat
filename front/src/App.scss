@@ -17,7 +17,8 @@ html, body {
 }
 
 .shadow {
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 2px solid #422800;
+  box-shadow: #422800 4px 4px 0 0;
 }
 
 .shadow-gif {
@@ -45,13 +46,50 @@ main {
 }
 
 .btn {
+  background-color: $gray;
+  color: $platinum;
+  font-family: 'cute';
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 5vh;
+  width: 30vw;
+}
+
+.btn:hover {
+  background-color: $gunmetal;
+}
+
+.btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+
+/* .btn {
   height: 5vh;
   width: 30vw;
   border-radius: 15px;
   background-color: $gray;
   color: $platinum;
   font-family: 'cute';
-}
+} */
 
 .login_container {
     display: flex;
@@ -62,6 +100,8 @@ main {
 
 .btns {
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .navbar {
@@ -81,8 +121,9 @@ main {
   max-width: 25vw;
   max-height: 15vh;
   background-color: $cinereous;
-  border: 3px solid $gray;
+  border: 3px solid $gunmetal;
   border-radius: 5px;
+  box-shadow: $gunmetal 4px 4px 0 0;
 }
 
 .card_container {
@@ -97,6 +138,11 @@ main {
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(auto-fill, 35vh);
   align-items: end;
+  margin-bottom: 3vh;
+}
+
+.card {
+  margin-bottom: 1vh;
 }
 
 .collection_header {
