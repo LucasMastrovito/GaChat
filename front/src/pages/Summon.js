@@ -4,16 +4,16 @@ import "./Summon.css";
 function Summon() {
     const [Data, setData] = useState({});
     const [Url, setUrl] = useState('');
-    const [attemps, setAttemps] = useState();
+    const [attemps, setAttemps] = useState(null);
 
     useEffect(() => {
         const get = async () => {
-            fetch('https://gachat.onrender.com/attemps/' + localStorage.getItem('userId'))
-            .then(res => res.json())
-            .then(data => {
-                setAttemps(data.attemps);
-            });
+            const res = await fetch('https://gachat.onrender.com/attemps/' + localStorage.getItem('userId'));
+            const data = await res.json();
+            console.log(data)
+            setAttemps(data);
         }
+        console.log('yo')
         get();
             
     }, []);
@@ -35,7 +35,9 @@ function Summon() {
     return (
     <div className="summon_container">
         {
-            attemps > 0 ? 
+            attemps === null ?
+            <h1>Chargement...</h1> :
+            attemps === 0 ?
             <h1>Plus d'essais...</h1>
             :
         <div>

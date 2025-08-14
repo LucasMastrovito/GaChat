@@ -28,8 +28,6 @@ function Collection() {
                 <p>{total} chats invoqués</p>
                 <p>{completion}/57 chats possédés</p>
             </div>
-            <div className="collection_bar">
-            </div>
             <div className="cards">
                 {display}
             </div>
