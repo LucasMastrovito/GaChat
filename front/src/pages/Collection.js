@@ -7,10 +7,10 @@ function Collection() {
     const [completion, setCompletion] = useState(0);
     const [rarities, setRarities] = useState();
     const rarityOrder = ['divin', 'legendary', 'mythic', 'rare', 'basique'];
-    //https://gachat.onrender.com/
+
     useEffect(() => {
         const get = async () => {
-        const res = await fetch('http://localhost:3000/collection/' + localStorage.getItem('userId'));
+        const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
         const data = await res.json();
 
         const rarityCounts = data.reduce((acc, item) => {
