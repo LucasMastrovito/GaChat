@@ -34,14 +34,6 @@ app.get('/summon/:user', async (req, res) => {
         user = await User.findOne({ id: userId });
     }
 
-    const todayStr = new Date().toDateString(); // ex: "Wed Aug 14 2025"
-    const lastResetStr = user.lastreset ? new Date(user.lastreset).toDateString() : null;
-
-    if (lastResetStr !== todayStr) {
-        user.attemps = 5; // reset quotidien
-        user.lastreset = new Date(); // on garde la date complète pour info
-    }
-
     if (user.attemps === 0) {
         res.json({'attemps': 0});
     } else {
@@ -100,7 +92,14 @@ app.get('/collection/:user', async (req, res) => {
 
 app.get('/attemps/:user', async (req, res) => {
     const userId = parseInt(req.params.user);
-    user = await User.findOne({ id: userId });
+    const user = await User.findOne({ id: userId });
+    const now = new Date();
+    const resetDelay = 8 * 60 * 60 * 1000;
+
+     if (!user.lastreset || now - new Date(user.lastreset) >= resetDelay) {
+        user.attemps = 5;
+        user.lastreset = now;
+    }
 
     res.json(user.attemps);
 })
