@@ -80,7 +80,18 @@ app.get('/collection/:user', async (req, res) => {
     const userId = parseInt(req.params.user);
     user = await User.findOne({ id: userId });
 
-    res.json(user.invocations);
+     const invocationsObj = Object.fromEntries(user.invocations);
+
+    const collection = Object.entries(invocationsObj).map(([chatId, count]) => {
+        const cat = catsData.find(c => c.id === chatId);
+        return {
+            id: chatId,
+            count,
+            rarity: cat ? cat.rarity : 'unknown'
+        };
+    });
+    console.log(collection)
+    res.json(collection);
 })
 
 app.get('/attemps/:user', async (req, res) => {

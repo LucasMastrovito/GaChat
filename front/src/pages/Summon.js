@@ -44,7 +44,7 @@ function Summon() {
             <h1 className="name">{Data.id}</h1>
             <div className='summon_card'>
                 { Url ?
-                <img className="gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}></img>
+                <img className="gif shadow-gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}></img>
                 :
                 <img className="box" alt="cat" src={'/abonnement.png'}></img>
                 }
