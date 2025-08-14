@@ -99,6 +99,7 @@ app.get('/attemps/:user', async (req, res) => {
      if (!user.lastreset || now - new Date(user.lastreset) >= resetDelay) {
         user.attemps = 5;
         user.lastreset = now;
+        console.log('Attemps reset for ' + user.name + ' at ' + now);
     }
 
     res.json(user.attemps);
