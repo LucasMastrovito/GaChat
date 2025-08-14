@@ -1,0 +1,38 @@
+$platinum: #E3E3DD;
+$cinereous: #A4998E;
+$gunmetal: #293132;
+$jet: #474044;
+$gray: #4F5165;
+
+.shop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop-img {
+    width: 20vw;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    justify-content: space-evenly;
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55vw;
+    height: 30vh;
+    background-color: $cinereous;
+    border: 3px solid $gunmetal;
+    border-radius: 5px;
+    box-shadow: $gunmetal 4px 4px 0 0;
+}
+
+.kibbles-pic {
+    width: 10vw;
+}

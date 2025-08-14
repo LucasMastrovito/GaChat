@@ -123,6 +123,19 @@ app.get('/kibbles/:userId', async (req, res) => {
     res.json({ kibbles: user.kibbles });
 });
 
+app.get('/buykibbles/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const user = await User.findOne({ id: userId });
+
+    if (user.kibbles >= 100) {
+        user.kibbles -= 100;
+        user.attemps += 1;
+        await user.save();
+        res.send('buy');
+    }
+    res.send('error');
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
