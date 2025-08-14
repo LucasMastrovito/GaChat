@@ -74,9 +74,8 @@ app.get('/getcat/:id', (req, res) => {
 
 app.get('/collection/:user', async (req, res) => {
     const userId = parseInt(req.params.user);
-    user = await User.findOne({ id: userId });
-
-     const invocationsObj = Object.fromEntries(user.invocations);
+    const user = await User.findOne({ id: userId });
+    const invocationsObj = Object.fromEntries(user.invocations);
 
     const collection = Object.entries(invocationsObj).map(([chatId, count]) => {
         const cat = catsData.find(c => c.id === chatId);
@@ -86,7 +85,6 @@ app.get('/collection/:user', async (req, res) => {
             rarity: cat ? cat.rarity : 'unknown'
         };
     });
-    console.log(collection)
     res.json(collection);
 })
 
@@ -99,6 +97,7 @@ app.get('/attemps/:user', async (req, res) => {
      if (!user.lastreset || now - new Date(user.lastreset) >= resetDelay) {
         user.attemps = 5;
         user.lastreset = now;
+        await user.save();
         console.log('Attemps reset for ' + user.name + ' at ' + now);
     }
 
