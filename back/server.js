@@ -71,6 +71,10 @@ app.get('/summon/:user', async (req, res) => {
     }
 })
 
+app.get('/total', (req, res) => {
+    res.send(catsData.length);
+})
+
 app.get('/getcat/:id', (req, res) => {
     const id = req.params.id;
     res.json(catsData.find(cat => cat.id === id));
