@@ -7,23 +7,23 @@ function Summon() {
     const [Url, setUrl] = useState('');
     const [attemps, setAttemps] = useState(null);
     const [animKey, setAnimKey] = useState(0);
+    const [animStill, setAnimStill] = useState(false);
 
     useEffect(() => {
         const get = async () => {
-            const res = await fetch('https://gachat.onrender.com/attemps/' +  '3'/* localStorage.getItem('userId') */);
+            const res = await fetch('https://gachat.onrender.com/attemps/' +  localStorage.getItem('userId'));
             const data = await res.json();
-            console.log(data)
             setAttemps(data);
         }
-        console.log('yo')
         get();
             
     }, []);
 
     const summon = async (e) => {
-        fetch('https://gachat.onrender.com/summon/' + '3'/* localStorage.getItem('userId') */)
+        fetch('https://gachat.onrender.com/summon/' + localStorage.getItem('userId'))
         .then(res => res.json())
         .then(data => {
+            setAnimStill(true);
             if (data.hasOwnProperty('attemps')) {
                 setAttemps(0);
             } else {
@@ -51,7 +51,7 @@ function Summon() {
                     rarity={Data.rarity} 
                     gifUrl={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}
                     name={Data.id}
-                    onFinish={() => console.log("Animation terminée")}
+                    onComplete={() => setAnimStill(false)}
                 />
             </div>
              :
@@ -59,8 +59,12 @@ function Summon() {
                 <img alt="box" className="box" src="/abonnement.png" />
             </div>
             }
-            <button className="btn" onClick={summon}>Invoquer</button>
-            <h3>Il te reste {attemps} invocations !</h3>
+            {!animStill && (
+                <div>
+                    <button className="btn" onClick={summon}>Invoquer</button>
+                    <h3>Il te reste {attemps} invocations !</h3>
+                </div>
+            )}
         </div>
         }
     </div>
