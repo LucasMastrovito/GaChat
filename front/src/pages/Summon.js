@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import "./Summon.scss";
-import "../App.scss";
+import SummonAnimation from "../SummonAnimation";
 
 function Summon() {
     const [Data, setData] = useState({});
     const [Url, setUrl] = useState('');
     const [attemps, setAttemps] = useState(null);
+    const [animKey, setAnimKey] = useState(0);
 
     useEffect(() => {
         const get = async () => {
-            const res = await fetch('https://gachat.onrender.com/attemps/' + localStorage.getItem('userId'));
+            const res = await fetch('https://gachat.onrender.com/attemps/' +  '3'/* localStorage.getItem('userId') */);
             const data = await res.json();
             console.log(data)
             setAttemps(data);
@@ -20,15 +21,16 @@ function Summon() {
     }, []);
 
     const summon = async (e) => {
-        fetch('https://gachat.onrender.com/summon/' + localStorage.getItem('userId'))
+        fetch('https://gachat.onrender.com/summon/' + '3'/* localStorage.getItem('userId') */)
         .then(res => res.json())
         .then(data => {
             if (data.hasOwnProperty('attemps')) {
                 setAttemps(0);
             } else {
                 setData(data);
-                console.log(data.id)
                 setUrl(data.id.toLowerCase());
+                setAnimKey(animKey + 1);
+                setAttemps(attemps - 1);
             }
         });
     };
@@ -41,15 +43,22 @@ function Summon() {
             attemps === 0 ?
             <h1>Plus d'essais...</h1>
             :
-        <div>
-            <h1 className="name">{Data.id}</h1>
-            <div className='summon_card'>
-                { Url ?
-                <img className="gif shadow-gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}></img>
-                :
-                <img className="box" alt="cat" src={'/abonnement.png'}></img>
-                }
+        <div className="summon_card">
+            { Url ?
+            <div className="summon_gif">
+                <SummonAnimation
+                    key={animKey}
+                    rarity={Data.rarity} 
+                    gifUrl={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}
+                    name={Data.id}
+                    onFinish={() => console.log("Animation terminée")}
+                />
             </div>
+             :
+            <div className="summon_gif">
+                <img alt="box" className="box" src="/abonnement.png" />
+            </div>
+            }
             <button className="btn" onClick={summon}>Invoquer</button>
             <h3>Il te reste {attemps} invocations !</h3>
         </div>
