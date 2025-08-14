@@ -18,7 +18,7 @@
 
 {
     "id": "Channiversaire",
-    "rarity": "mythic"
+    "rarity": "legendary"
 },
 
 {
@@ -308,6 +308,36 @@
 
 {
     "id": "CestLarry",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakiconduit",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakibrule",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chasoucanicule",
+    "rarity": "basique"
+},
+
+{
+    "id": "Putiang Sous Drogue",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chadieu",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakivachezlecoiffeur",
     "rarity": "basique"
 }
 
