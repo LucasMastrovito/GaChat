@@ -10,7 +10,7 @@ function Navbar() {
         <div className="navbar">
             <button className="nav" value='/login' onClick={click}>Login</button>
             <button className="nav" value='/summon' onClick={click}>Invoquer</button>
-            <button className="nav" value='/collection' onClick={click}>Collection</button>
+            <button className="nav" value='/collection' onClick={click}>Chakidex</button>
         </div>
     )
 }

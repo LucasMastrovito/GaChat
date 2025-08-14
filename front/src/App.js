@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Summon from './pages/Summon';
@@ -12,7 +12,8 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
-        <h1>GaChat !</h1>
+        <img alt='logo' src='/minou.png' style={{marginLeft: '3vw'}} />
+        <h1 style={{marginLeft: '7vw'}}>GaChat !</h1>
       </header>
       <Navbar></Navbar>
       <main>
