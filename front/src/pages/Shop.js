@@ -20,7 +20,10 @@ function Shop() {
     }
     return (
         <div className="shop">
-            <ShopItem name='Invocation x1' img='/abonnement.png' price='100' click={buySummon}></ShopItem>
+            <ShopItem name='Invocation' img='/abonnement.png' price='100' click={buySummon}></ShopItem>
+            <ShopItem name='Invocation Rare' img='/abonnement.png' price='150' click={buySummon}></ShopItem>
+            <ShopItem name='Invocation Mythique' img='/abonnement.png' price='300' click={buySummon}></ShopItem>
+            <ShopItem name='Invocation Légendaire' img='/abonnement.png' price='500' click={buySummon}></ShopItem>
         </div>
     )
 }

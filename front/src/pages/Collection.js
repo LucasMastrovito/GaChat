@@ -56,24 +56,24 @@ function Collection() {
                 { rarities ? 
                 <div className="collection_bar">
                     <div className="rarity">
-                        <p>{rarities.basique ? rarities.basique : 0}</p>
                         <img alt="rarity" src={'/rarity/basique.png'} style={{width: '10vw'}} />
+                        <p>{rarities.basique ? rarities.basique : 0}</p>
                     </div>
                     <div className="rarity">
-                        <p>{rarities.rare ? rarities.rare : 0}</p>
                         <img alt="rarity" src={'/rarity/rare.png'} style={{width: '10vw'}} />
+                        <p>{rarities.rare ? rarities.rare : 0}</p>
                     </div>
                     <div className="rarity">
-                        <p>{rarities.mythic ? rarities.mythic : 0}</p>
                         <img alt="rarity" src={'/rarity/mythic.png'} style={{width: '10vw'}} />
+                        <p>{rarities.mythic ? rarities.mythic : 0}</p>
                     </div>
                     <div className="rarity">
-                        <p>{rarities.legendary ? rarities.legendary : 0}</p>
                         <img alt="rarity" src={'/rarity/legendary.png'} style={{width: '10vw'}} />
+                        <p>{rarities.legendary ? rarities.legendary : 0}</p>
                     </div>
                     <div className="rarity">
-                        <p>{rarities.divin ? rarities.divin : 0}</p>
                         <img alt="rarity" src={'/rarity/divin.png'} style={{width: '10vw'}} />
+                        <p>{rarities.divin ? rarities.divin : 0}</p>
                     </div>
                 </div> : <span></span> }
             </div>
