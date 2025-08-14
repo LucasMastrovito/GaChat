@@ -33,11 +33,13 @@ function Collection() {
 
             setCompletion(newCards.length);
         };
+
         const getTotalCats = async () => {
             const res = await fetch('https://gachat.onrender.com/total');
             const data = await res.json();
             setMaxCats(data);
         }
+
         get();
         getTotalCats();
         

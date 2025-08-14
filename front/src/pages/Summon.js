@@ -30,10 +30,14 @@ function Summon() {
                 setData(data);
                 setUrl(data.id.toLowerCase());
                 setAnimKey(animKey + 1);
-                setAttemps(attemps - 1);
             }
         });
     };
+
+    const summonComplete = () => {
+        setAttemps(attemps - 1);
+        setAnimStill(false);
+    }
 
     return (
     <div className="summon_container">
@@ -51,7 +55,7 @@ function Summon() {
                     rarity={Data.rarity} 
                     gifUrl={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + Url + '.gif'}
                     name={Data.id}
-                    onComplete={() => setAnimStill(false)}
+                    onComplete={summonComplete}
                 />
             </div>
              :

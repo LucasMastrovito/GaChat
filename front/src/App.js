@@ -11,10 +11,6 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <header className="App-header">
-        <img alt='logo' src='/minou.png' style={{marginLeft: '3vw'}} />
-        <h1 style={{marginLeft: '7vw'}}>GaChat !</h1>
-      </header>
       <Navbar></Navbar>
       <main>
         {

@@ -104,6 +104,25 @@ app.get('/attemps/:user', async (req, res) => {
     res.json(user.attemps);
 })
 
+app.get('/kibbles/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const user = await User.findOne({ id: userId });
+
+    if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+
+    const now = new Date();
+    const lastClaim = new Date(user.lastConnexion);
+    const isAnotherDay = now.toDateString() !== lastClaim.toDateString();
+
+    if (isAnotherDay) {
+        user.kibbles += 20;
+        user.lastConnexion = now;
+        await user.save();
+    }
+
+    res.json({ kibbles: user.kibbles });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

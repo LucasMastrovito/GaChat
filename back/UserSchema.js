@@ -7,7 +7,9 @@ const userSchema = new Schema({
     name: { type: String, required: true },
     attemps: { type: Number, default: 0 },
     lastreset: { type: Date, default: null },
-    invocations: { type: Map, of: Number, default: {} }
+    invocations: { type: Map, of: Number, default: {} },
+    kibbles: { type: Number, default: 0 },
+    lastConnexion: { type: Date, default: new Date() }
 });
 
 const User = mongoose.model('User', userSchema);
