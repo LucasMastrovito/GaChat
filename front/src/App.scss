@@ -25,6 +25,11 @@ html, body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.kibbles {
+  display: flex;
+  align-items: center;
+}
+
 .App {
   text-align: center;
   color: $gunmetal;
@@ -36,6 +41,7 @@ html, body {
   height: 10vh;
   
   display: flex;
+  align-items: center;
   font-size: calc(10px + 2vmin);
   color: $platinum;
 }

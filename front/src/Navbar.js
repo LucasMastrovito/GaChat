@@ -19,10 +19,10 @@ function Navbar() {
     return (
         <div>
             <header className="App-header">
-                <img alt='logo' src='/minou.png' style={{marginLeft: '3vw'}} />
-                <h1 style={{marginLeft: '7vw'}}>GaChat !</h1>
-                <div>
-                    <img alt="kibbles" src="/kibbles.png" />
+                <img alt='logo' src='/minou.png' style={{marginLeft: '3vw', maxHeight: '10vh'}} />
+                <h1 style={{marginLeft: '7vw', marginRight: '3vw', width: '50%'}}>GaChat !</h1>
+                <div className="kibbles">
+                    <img alt="kibbles" src="/kibbles.png" style={{maxWidth: '10vw'}} />
                     <p>{kibbles}</p>
                 </div>
             </header>
