@@ -4,35 +4,42 @@ import Card from "./Card";
 function Collection() {
     const [display, setDisplay] = useState();
     const [total, setTotal] = useState(0);
+    const [maxCats, setMaxCats] = useState(0);
     const [completion, setCompletion] = useState(0);
     const [rarities, setRarities] = useState();
-    const rarityOrder = ['divin', 'legendary', 'mythic', 'rare', 'basique'];
 
     useEffect(() => {
         const get = async () => {
-        const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
-        const data = await res.json();
+            const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
+            const data = await res.json();
+            const rarityOrder = ['divin', 'legendary', 'mythic', 'rare', 'basique'];
 
-        const rarityCounts = data.reduce((acc, item) => {
-            acc[item.rarity] = (acc[item.rarity] || 0) + item.count;
-            return acc;
-        }, {});
-        setRarities(rarityCounts);
+            const rarityCounts = data.reduce((acc, item) => {
+                acc[item.rarity] = (acc[item.rarity] || 0) + item.count;
+                return acc;
+            }, {});
+            setRarities(rarityCounts);
 
-        const total = data.reduce((sum, item) => sum + item.count, 0);
-        setTotal(total);
+            const total = data.reduce((sum, item) => sum + item.count, 0);
+            setTotal(total);
 
-        const sortedData = [...data].sort((a, b) => {
-            return rarityOrder.indexOf(a.rarity) - rarityOrder.indexOf(b.rarity);
-        });
-        const newCards = sortedData.map(item => (
-            <Card key={item.id} id={item.id} nb={item.count} rarity={item.rarity} />
-        ));
-        setDisplay(newCards);
+            const sortedData = [...data].sort((a, b) => {
+                return rarityOrder.indexOf(a.rarity) - rarityOrder.indexOf(b.rarity);
+            });
+            const newCards = sortedData.map(item => (
+                <Card key={item.id} id={item.id} nb={item.count} rarity={item.rarity} />
+            ));
+            setDisplay(newCards);
 
-        setCompletion(newCards.length);
-    };
+            setCompletion(newCards.length);
+        };
+        const getTotalCats = async () => {
+            const res = await fetch('https://gachat.onrender.com/total');
+            const data = await res.json();
+            setMaxCats(data);
+        }
         get();
+        getTotalCats();
         
     }, [])
 
@@ -42,7 +49,7 @@ function Collection() {
             <div className="collection_header shadow">
                 <div className="collection_bar">
                     <p>{total} chats invoqués</p>
-                    <p>{completion}/57 chats possédés</p>
+                    <p>{completion}/{maxCats} chats possédés</p>
                 </div>
                 { rarities ? 
                 <div className="collection_bar">
