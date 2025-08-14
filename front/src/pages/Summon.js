@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Summon.css";
 
 function Summon() {
@@ -6,26 +6,37 @@ function Summon() {
     const [Url, setUrl] = useState('');
     const [attemps, setAttemps] = useState();
 
-    console.log(Url)
+    useEffect(() => {
+        const get = async () => {
+            fetch('https://gachat.onrender.com/attemps/' + localStorage.getItem('userId'))
+            .then(res => res.json())
+            .then(data => {
+                setAttemps(data.attemps);
+            });
+        }
+        get();
+            
+    }, []);
+
     const summon = async (e) => {
         fetch('https://gachat.onrender.com/summon/' + localStorage.getItem('userId'))
         .then(res => res.json())
         .then(data => {
             if (data.hasOwnProperty('attemps')) {
-                setAttemps("Plus d'essais...");
+                setAttemps(0);
             } else {
                 setData(data);
                 console.log(data.id)
                 setUrl(data.id.toLowerCase());
             }
         });
-    }
+    };
 
     return (
     <div className="summon_container">
         {
-            attemps ? 
-            <h1>{attemps}</h1>
+            attemps > 0 ? 
+            <h1>Plus d'essais...</h1>
             :
         <div>
             <h1 className="name">{Data.id}</h1>
@@ -37,6 +48,7 @@ function Summon() {
                 }
             </div>
             <button className="btn" onClick={summon}>Invoquer</button>
+            <h3>Il te reste {attemps} invocations !</h3>
         </div>
         }
     </div>

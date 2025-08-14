@@ -9,7 +9,6 @@ function Card(props) {
             fetch('https://gachat.onrender.com/getcat/' + props.id)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setRarity(data.rarity)
             });
         }
@@ -22,8 +21,10 @@ function Card(props) {
                 <img className="gif_collec" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + url + '.gif'}></img>
             </div>
             <p>{props.id}</p>
-            <p>{rarity}</p>
-            <p>{props.nb}</p>
+            <div className="infos">
+                <img alt="rarity" src={'/rarity/' + {rarity} + '.png'} />
+                <p>{props.nb}</p>
+            </div>
         </div>
     )
 }

@@ -79,8 +79,18 @@ main {
 
 .cards {
   display: grid;
-  margin-top: 5vh;
   grid-template-columns: auto auto auto;
   grid-template-rows: repeat(auto-fill, 35vh);
   align-items: end;
+}
+
+.collection_bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.infos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

@@ -79,6 +79,13 @@ app.get('/collection/:user', async (req, res) => {
     res.json(user.invocations);
 })
 
+app.get('/attemps/:user', async (req, res) => {
+    const userId = parseInt(req.params.user);
+    user = await User.findOne({ id: userId });
+
+    res.json(user.attemps);
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
