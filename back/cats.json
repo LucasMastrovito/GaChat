@@ -284,6 +284,31 @@
 {
     "id": "Chakiexplose",
     "rarity": "basique"
+},
+
+{
+    "id": "Chaclavier",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakigeek",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakigobe",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chahouilavrraiment",
+    "rarity": "mythic"
+},
+
+{
+    "id": "CestLarry",
+    "rarity": "basique"
 }
 
 ]

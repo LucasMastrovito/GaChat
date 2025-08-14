@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import "./Summon.css";
+import "./Summon.scss";
+import "../App.scss";
 
 function Summon() {
     const [Data, setData] = useState({});
