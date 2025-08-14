@@ -1,8 +1,12 @@
 const { randomInt } = require('crypto');
 const express = require('express')
 const app = express()
-var cors = require('cors');
-app.use(cors());
+const cors = require('cors');
+
+app.use(cors({
+    origin: '*'
+}));
+
 const port = 3000
 const db = require('./db.js')
 db();
