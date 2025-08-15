@@ -132,9 +132,10 @@ main {
 
 .cards {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33vw 33vw 33vw;
   grid-template-rows: repeat(auto-fill, 35vh);
   align-items: end;
+  justify-content: center;
   margin-bottom: 3vh;
 }
 

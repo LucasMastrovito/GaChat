@@ -41,12 +41,9 @@ function Summon() {
 
     return (
     <div className="summon_container">
-        {
-            attemps === null ?
-            <h1>Chargement...</h1> :
-            attemps === 0 ?
-            <h1>Plus d'essais...</h1>
-            :
+        { attemps === null ?
+        <h1>Chargement...</h1>
+        :
         <div className="summon_card">
             { Url ?
             <div className="summon_gif">
@@ -65,8 +62,10 @@ function Summon() {
             }
             {!animStill && (
                 <div>
+                    { attemps === 0 ? <span></span> :
                     <button className="btn" onClick={summon}>Invoquer</button>
-                    <h3>Il te reste {attemps} invocations !</h3>
+                    }
+                    <h3>{attemps === 0 ? "Tu n'as plus d'invocations..." : `Il te reste ${attemps} invocations !`}</h3>
                 </div>
             )}
         </div>

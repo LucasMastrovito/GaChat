@@ -39,12 +39,11 @@ app.get('/summon/:user', async (req, res) => {
     } else {
         const luck = randomInt(100);
         var rarity = 'basique';
-        console.log(user)
+        
         user.attemps--;
         if (luck >= 95) {
-        rarity = 'divin';
-        }
-        else if (luck >= 90) {
+            rarity = 'divin';
+        } else if (luck >= 90) {
             rarity = 'legendary';
         } else if (luck >= 70) {
             rarity = 'mythic';
