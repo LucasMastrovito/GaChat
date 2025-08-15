@@ -38,3 +38,9 @@ $gray: #4F5165;
 .box {
     max-width: 80vw;
 }
+
+.buttons-summon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

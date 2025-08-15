@@ -69,7 +69,8 @@ main {
   -webkit-user-select: none;
   touch-action: manipulation;
   height: 5vh;
-  width: 30vw;
+  min-width: 30vw;
+  margin: 2vw;
 }
 
 .btn:hover {

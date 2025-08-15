@@ -12,6 +12,7 @@ function Login() {
             <div className="btns">
                 <button className="btn" value='1' onClick={click}>Lucas</button>
                 <button className="btn" value='2' onClick={click}>Alix</button>
+                <button className="btn" value='3' onClick={click}>Test</button>
             </div>
         </div>
     )

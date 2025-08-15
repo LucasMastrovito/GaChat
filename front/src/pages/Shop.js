@@ -14,7 +14,7 @@ function Shop() {
     }, []);
 
     const buySummon = (yo) => {
-        fetch(`https://gachat.onrender.com/buysummon/${yo}/${localStorage.getItem('userId')}`)
+        fetch(`https://gachat.onrender.com/buysummon/${yo}/${localStorage.getItem('userId')}`);
     }
     return (
         <div className="shop">

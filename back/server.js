@@ -25,7 +25,8 @@ async function createUser(id) {
     console.log("Utilisateur créé !");
 }
 
-app.get('/summon/:user', async (req, res) => {
+app.get('/summon/:type/:user', async (req, res) => {
+    const type = req.params.type;
     const userId = parseInt(req.params.user);
     let user = await User.findOne({ id: userId });
 
@@ -40,16 +41,28 @@ app.get('/summon/:user', async (req, res) => {
         const luck = randomInt(100);
         var rarity = 'basique';
 
-        user.attemps--;
-        if (luck >= 95) {
-            rarity = 'divin';
-        } else if (luck >= 90) {
-            rarity = 'legendary';
-        } else if (luck >= 70) {
-            rarity = 'mythic';
-        } else if (luck >= 40) {
+        if (type === 'basic') {
+            user.attemps--;
+            if (luck >= 95) {
+                rarity = 'divin';
+            } else if (luck >= 90) {
+                rarity = 'legendary';
+            } else if (luck >= 70) {
+                rarity = 'mythic';
+            } else if (luck >= 40) {
+                rarity = 'rare';
+            }
+        } else if (type === 'rare') {
+            user.attempsRare--;
             rarity = 'rare';
+        } else if (type === 'mythic') {
+            user.attempsMythic--;
+            rarity = 'mythic';
+        } else if (type === 'legendary') {
+            user.attempsLegendary--;
+            rarity = 'legendary';
         }
+
         pool = catsData.filter(cat => cat.rarity === rarity);
         const randomIndex = Math.floor(Math.random() * pool.length);
         const randomCat = pool[randomIndex];
@@ -94,13 +107,13 @@ app.get('/attemps/:user', async (req, res) => {
     const resetDelay = 8 * 60 * 60 * 1000;
 
      if (!user.lastreset || now - new Date(user.lastreset) >= resetDelay) {
-        user.attemps = 5;
+        user.attemps += 5;
         user.lastreset = now;
         await user.save();
         console.log('Attemps reset for ' + user.name + ' at ' + now);
     }
 
-    res.json(user.attemps);
+    res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
 })
 
 app.get('/kibbles/:userId', async (req, res) => {
