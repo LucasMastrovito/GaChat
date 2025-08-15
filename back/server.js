@@ -143,7 +143,7 @@ app.get('/buysummon/:type/:userId', async (req, res) => {
         await user.save();
         res.send('buy mythic');
     } else if (type === 'legendary' && user.kibbles >= 500) {
-        user.kibbles -= 1=500;
+        user.kibbles -= 500;
         user.attempsLegendary += 1;
         await user.save();
         res.send('buy legendary');
