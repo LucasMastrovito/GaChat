@@ -39,7 +39,7 @@ app.get('/summon/:user', async (req, res) => {
     } else {
         const luck = randomInt(100);
         var rarity = 'basique';
-        
+
         user.attemps--;
         if (luck >= 95) {
             rarity = 'divin';
@@ -122,7 +122,7 @@ app.get('/kibbles/:userId', async (req, res) => {
     res.json({ kibbles: user.kibbles });
 });
 
-app.get('/buykibbles/:userId', async (req, res) => {
+app.get('/buysummon/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
 
