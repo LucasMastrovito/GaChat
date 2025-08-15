@@ -36,7 +36,7 @@ app.get('/summon/:type/:user', async (req, res) => {
     }
 
     if (user.attemps === 0) {
-        res.json({'attemps': 0});
+        res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
     } else {
         const luck = randomInt(100);
         var rarity = 'basique';
@@ -53,14 +53,26 @@ app.get('/summon/:type/:user', async (req, res) => {
                 rarity = 'rare';
             }
         } else if (type === 'rare') {
-            user.attempsRare--;
-            rarity = 'rare';
+            if (user.attempsRare > 0) {
+                user.attempsRare--;
+                rarity = 'rare';
+            } else {
+                res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            }
         } else if (type === 'mythic') {
-            user.attempsMythic--;
-            rarity = 'mythic';
+            if (user.attempsMythic > 0) {
+                user.attempsMythic--;
+                rarity = 'mythic';
+            } else {
+                res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            }
         } else if (type === 'legendary') {
-            user.attempsLegendary--;
-            rarity = 'legendary';
+            if (user.attempsLegendary > 0) {
+                user.attempsLegendary--;
+                rarity = 'legendary';
+            } else {
+                res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            }
         }
 
         pool = catsData.filter(cat => cat.rarity === rarity);
