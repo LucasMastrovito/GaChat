@@ -122,15 +122,31 @@ app.get('/kibbles/:userId', async (req, res) => {
     res.json({ kibbles: user.kibbles });
 });
 
-app.get('/buysummon/:userId', async (req, res) => {
+app.get('/buysummon/:type/:userId', async (req, res) => {
+    const type = req.params.type;
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
 
-    if (user.kibbles >= 100) {
+    if (type === 'basic' && user.kibbles >= 100) {
         user.kibbles -= 100;
         user.attemps += 1;
         await user.save();
         res.send('buy');
+    } else if (type === 'rare' && user.kibbles >= 150) {
+        user.kibbles -= 150;
+        user.attempsRare += 1;
+        await user.save();
+        res.send('buy rare');
+    } else if (type === 'mythic' && user.kibbles >= 300) {
+        user.kibbles -= 300;
+        user.attempsMythic += 1;
+        await user.save();
+        res.send('buy mythic');
+    } else if (type === 'legendary' && user.kibbles >= 500) {
+        user.kibbles -= 1=500;
+        user.attempsLegendary += 1;
+        await user.save();
+        res.send('buy legendary');
     }
     res.send('error');
 })
