@@ -1,20 +1,19 @@
 import ShopItem from "./ShopItem";
 import './Shop.scss';
-import { useEffect, useState } from "react";
 
-function Shop() {
-    const [kibbles, setKibbles] = useState(0);
-    
-    useEffect(() => {
-        fetch(`https://gachat.onrender.com/kibbles/${localStorage.getItem('userId')}`)
-        .then(res => res.json())
-        .then(data => {
-            setKibbles(data.kibbles);
-        });
-    }, []);
+function Shop(props) {
 
-    const buySummon = (yo) => {
-        fetch(`https://gachat.onrender.com/buysummon/${yo}/${localStorage.getItem('userId')}`);
+    const buySummon = (type) => {
+        if (type === 'basic' && props.kibbles >= 100) {
+            props.setKibbles(props.kibbles - 100);
+        } else if (type === 'rare' && props.kibbles >= 150) {
+            props.setKibbles(props.kibbles - 150);
+        } else if (type === 'mythic' && props.kibbles >= 300) {
+            props.setKibbles(props.kibbles - 300);
+        } else if (type === 'legendary' && props.kibbles >= 500) {
+            props.setKibbles(props.kibbles - 500);
+        }
+        fetch(`https://gachat.onrender.com/buysummon/${type}/${localStorage.getItem('userId')}`);
     }
     return (
         <div className="shop">

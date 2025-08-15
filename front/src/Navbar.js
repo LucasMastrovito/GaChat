@@ -1,17 +1,7 @@
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar(props) {
     const navigate = useNavigate();
-    const [kibbles, setKibbles] = useState(0);
-
-    useEffect(() => {
-        fetch(`https://gachat.onrender.com/kibbles/${localStorage.getItem('userId')}`)
-            .then(res => res.json())
-            .then(data => {
-                setKibbles(data.kibbles);
-        });
-    }, []);
 
     const click = (e) => {
         navigate(e.target.value);
@@ -27,7 +17,7 @@ function Navbar() {
                 <h1 style={{marginLeft: '7vw', marginRight: '3vw', width: '50%'}}>GaChat !</h1>
                 <div className="kibbles" onClick={shop}>
                     <img alt="kibbles" src="/kibbles.png" style={{maxWidth: '10vw'}} />
-                    <p>{kibbles}</p>
+                    <p>{props.kibbles}</p>
                 </div>
             </header>
             <div className="navbar shadow">
