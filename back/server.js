@@ -219,7 +219,7 @@ app.get('/rarityAchievements/:type/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
     const type = req.params.type;
-    const reward = { rare: '10', mythic: '30', legendary: '50', divin: '100'};
+    const reward = { rare: 10, mythic: 30, legendary: 50, divin: 100};
     let totalRewards = 0;
 
     if (!user.achievements.rarity) user.achievements.rarity = {};
@@ -234,7 +234,7 @@ app.get('/rarityAchievements/:type/:userId', async (req, res) => {
     let rarityLevel = user.achievements.rarity[type] || 0;
     if (rarityCount >= (rarityLevel + 1) * 3) {
         rarityLevel++;
-        totalRewards += rarityLevel * reward.type;
+        totalRewards += rarityLevel * reward[type];
     }
     user.achievements.rarity[type] = rarityLevel;
     user.kibbles += totalRewards;
