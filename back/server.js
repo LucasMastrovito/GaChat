@@ -243,7 +243,7 @@ app.post('/rarityAchievements/:type/:userId', async (req, res) => {
     res.json(user.achievements);
 })
 
-app.post('/getAchievements/:userId', async (req, res) => {
+app.get('/getAchievements/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
 

@@ -30,7 +30,7 @@ function Achievements(props) {
                 <ShopItem name='Chats Légendaires' img='/rarity/legendary.png' price='50' click={() =>check('rarityAchievement/legendary')}></ShopItem>
                 <ShopItem name='Chats Divins' img='/rarity/divin.png' price='100' click={() =>check('rarityAchievement/divin')}></ShopItem>
             </div>
-            : <span> </span>}
+            : <span> </span> }
         </div>
     )
 }
