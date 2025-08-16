@@ -35,7 +35,8 @@ $gray: #4F5165;
     background-color: $cinereous;
     border: 3px solid $gunmetal;
     border-radius: 5px;
-    box-shadow: $gunmetal 4px 4px 0 0;  
+    box-shadow: $gunmetal 4px 4px 0 0;
+    transition: 0.3s;
 }
 
 .shop-item {
@@ -44,6 +45,11 @@ $gray: #4F5165;
     align-items: center;
     width: 30vw;
     height: 30vh;
+}
+
+.shop-card:active {
+    background-color: #c9bbae;
+    transform: scale(1.2);
 }
 
 .kibbles-pic {
