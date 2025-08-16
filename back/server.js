@@ -193,7 +193,7 @@ app.get('/summonAchievements/:userId', async (req, res) => {
     user.kibbles += totalRewards;
     await user.save();
 
-    res.json(user.achievements);
+    res.json({kibbles: totalRewards, achievements: user.achievements});
 })
 
 app.get('/collectionAchievements/:userId', async (req, res) => {
@@ -212,7 +212,7 @@ app.get('/collectionAchievements/:userId', async (req, res) => {
     user.kibbles += totalRewards;
     await user.save();
 
-    res.json(user.achievements);
+    res.json({kibbles: totalRewards, achievements: user.achievements});
 })
 
 app.get('/rarityAchievements/:type/:userId', async (req, res) => {
@@ -240,7 +240,7 @@ app.get('/rarityAchievements/:type/:userId', async (req, res) => {
     user.kibbles += totalRewards;
     await user.save();
 
-    res.json(user.achievements);
+    res.json({kibbles: totalRewards, achievements: user.achievements});
 })
 
 app.get('/getAchievements/:userId', async (req, res) => {
