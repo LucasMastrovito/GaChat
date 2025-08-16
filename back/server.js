@@ -176,7 +176,7 @@ app.get('/buysummon/:type/:userId', async (req, res) => {
     res.send('error');
 })
 
-app.post('/summonAchievement/:userId', async (req, res) => {
+app.get('/summonAchievement/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
     let totalRewards = 0;
@@ -196,7 +196,7 @@ app.post('/summonAchievement/:userId', async (req, res) => {
     res.json(user.achievements);
 })
 
-app.post('/collectionAchievements/:userId', async (req, res) => {
+app.get('/collectionAchievements/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
     let totalRewards = 0;
@@ -215,7 +215,7 @@ app.post('/collectionAchievements/:userId', async (req, res) => {
     res.json(user.achievements);
 })
 
-app.post('/rarityAchievements/:type/:userId', async (req, res) => {
+app.get('/rarityAchievements/:type/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
     const type = req.params.type;

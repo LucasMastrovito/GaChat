@@ -23,7 +23,7 @@ function Achievements(props) {
         <div>
             { Data ? 
             <div className="shop">
-                <ShopItem name={`${Data.invocations * 10} Chats invoqués`} img='/abonnement.png' price='10' click={() =>check('summonAchievement')}></ShopItem>
+                <ShopItem name={`${(Data.invocations + 1) * 10} chats invoqués`} img='/abonnement.png' price={`${(Data.invocations + 1) * 10}`} click={() =>check('summonAchievement')}></ShopItem>
                 <ShopItem name='Collection' img='/abonnement.png' price='100' click={() =>check('collectionAchievement')}></ShopItem>
                 <ShopItem name='Chats Rares' img='/rarity/rare.png' price='10' click={() => check('rarityAchievement/rare')}></ShopItem>
                 <ShopItem name='Chats Mythiques' img='/rarity/mythic.png' price='30' click={() =>check('rarityAchievement/mythic')}></ShopItem>
