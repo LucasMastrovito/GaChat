@@ -9,7 +9,8 @@ function Achievements(props) {
             const get = async () => {
                 const res = await fetch('https://gachat.onrender.com/getAchievements/' +  localStorage.getItem('userId'));
                 const data = await res.json();
-                setData(data.Achievements);
+                console.log(data)
+                setData(data);
             }
             get();
                 
@@ -19,7 +20,7 @@ function Achievements(props) {
         fetch(`https://gachat.onrender.com/${url}/${localStorage.getItem('userId')}`)
         .then(res => res.json())
         .then(data => {
-            setData(data.Achievements);
+            setData(data.achievements);
             props.setKibbles(props.kibbles + data.kibbles);
         });
     }
