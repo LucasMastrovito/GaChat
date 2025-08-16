@@ -16,7 +16,7 @@ function Achievements(props) {
     }, []);
 
     const check = (url) => {
-        fetch(`http://localhost:3000/${url}/${localStorage.getItem('userId')}`)
+        fetch(`https://gachat.onrender.com/${url}/${localStorage.getItem('userId')}`)
         .then(res => res.json())
         .then(data => {
             setData(data.achievements);
