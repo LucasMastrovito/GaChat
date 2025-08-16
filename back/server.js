@@ -231,12 +231,12 @@ app.get('/rarityAchievements/:type/:userId', async (req, res) => {
             rarityCount += count;
         }
     }
-    let rarityLevel = user.achievements.rarity[type] || 0;
+    let rarityLevel = user.achievements.rarity.get(type) || 0;
     if (rarityCount >= (rarityLevel + 1) * 3) {
         rarityLevel++;
         totalRewards += rarityLevel * reward[type];
     }
-    user.achievements.rarity[type] = rarityLevel;
+    user.achievements.rarity.set(type, rarityLevel);
     user.kibbles += totalRewards;
     await user.save();
 
