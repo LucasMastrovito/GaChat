@@ -176,6 +176,80 @@ app.get('/buysummon/:type/:userId', async (req, res) => {
     res.send('error');
 })
 
+app.post('/summonAchievement/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const user = await User.findOne({ id: userId });
+    let totalRewards = 0;
+
+    const totalInvocations = [...user.invocations.values()].reduce((a, b) => a + b, 0);
+    let currentLevel = user.achievements.invocations || 0;
+
+    while (totalInvocations >= (currentLevel + 1) * 10) {
+        currentLevel++;
+        totalRewards += currentLevel * 10;
+    }
+
+    user.achievements.invocations = currentLevel;
+    user.kibbles += totalRewards;
+    await user.save();
+
+    res.json(user.achievements);
+})
+
+app.post('/collectionAchievements/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const user = await User.findOne({ id: userId });
+    let totalRewards = 0;
+
+    const uniqueCats = user.invocations.size;
+    let colLevel = user.achievements.collection || 0;
+
+    while (uniqueCats >= (colLevel + 1) * 10) {
+        colLevel++;
+        totalRewards += colLevel * 100;
+    }
+    user.achievements.collection = colLevel;
+    user.kibbles += totalRewards;
+    await user.save();
+
+    res.json(user.achievements);
+})
+
+app.post('/rarityAchievements/:type/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const user = await User.findOne({ id: userId });
+    const type = req.params.type;
+    const kibbles = { rare: '10', mythic: '30', legendary: '50', divin: '100'};
+    let totalRewards = 0;
+
+    if (!user.achievements.rarity) user.achievements.rarity = {};
+        let rarityCount = 0;
+
+    for (let [catId, count] of user.invocations.entries()) {
+        const cat = catsData.find(c => c.id == catId);
+        if (cat && cat.rarity === type) {
+            rarityCount += count;
+        }
+    }
+    let rarityLevel = user.achievements.rarity[type] || 0;
+    while (rarityCount >= (rarityLevel + 1) * 3) {
+        rarityLevel++;
+        totalRewards += rarityLevel * kibbles.type;
+    }
+    user.achievements.rarity[type] = rarityLevel;
+    user.kibbles += totalRewards;
+    await user.save();
+
+    res.json(user.achievements);
+})
+
+app.post('/getAchievements/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
+    const user = await User.findOne({ id: userId });
+
+    res.json(user.achievements);
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

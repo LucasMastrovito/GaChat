@@ -12,7 +12,12 @@ const userSchema = new Schema({
     lastreset: { type: Date, default: null },
     invocations: { type: Map, of: Number, default: {} },
     kibbles: { type: Number, default: 0 },
-    lastConnexion: { type: Date, default: new Date() }
+    lastConnexion: { type: Date, default: new Date() },
+    achievements: {
+        invocations: { type: Number, default: 0 },
+        collection: { type: Number, default: 0 },
+        rarity: { type: Map, of: Number, default: {} }
+    }
 });
 
 const User = mongoose.model('User', userSchema);

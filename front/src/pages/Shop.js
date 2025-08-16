@@ -1,7 +1,13 @@
 import ShopItem from "./ShopItem";
 import './Shop.scss';
+import { useNavigate } from "react-router-dom";
 
 function Shop(props) {
+    const navigate = useNavigate();
+
+    const succes = (e) => {
+        navigate('/achievements');
+    }
 
     const buySummon = (type) => {
         if (type === 'basic' && props.kibbles >= 100) {
@@ -16,11 +22,14 @@ function Shop(props) {
         fetch(`https://gachat.onrender.com/buysummon/${type}/${localStorage.getItem('userId')}`);
     }
     return (
-        <div className="shop">
-            <ShopItem name='Invocation' img='/abonnement.png' price='100' click={() =>buySummon('basic')}></ShopItem>
-            <ShopItem name='Invocation Rare' img='/abonnement.png' price='150' click={() =>buySummon('rare')}></ShopItem>
-            <ShopItem name='Invocation Mythique' img='/abonnement.png' price='300' click={() => buySummon('mythic')}></ShopItem>
-            <ShopItem name='Invocation Légendaire' img='/abonnement.png' price='500' click={() =>buySummon('legendary')}></ShopItem>
+        <div>
+            <button className="btn" onClick={succes} style={{marginTop: '5vh'}}>Succès</button>
+            <div className="shop">
+                <ShopItem name='Invocation' img='/abonnement.png' price='100' click={() =>buySummon('basic')}></ShopItem>
+                <ShopItem name='Invocation Rare' img='/abonnement.png' price='150' click={() =>buySummon('rare')}></ShopItem>
+                <ShopItem name='Invocation Mythique' img='/abonnement.png' price='300' click={() => buySummon('mythic')}></ShopItem>
+                <ShopItem name='Invocation Légendaire' img='/abonnement.png' price='500' click={() =>buySummon('legendary')}></ShopItem>
+            </div>
         </div>
     )
 }

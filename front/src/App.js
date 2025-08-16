@@ -6,6 +6,7 @@ import Navbar from './Navbar';
 import Collection from './pages/Collection';
 import Shop from './pages/Shop';
 import { useEffect, useState } from 'react';
+import Achievements from './pages/Achievements';
 
 function App() {
   const storedUserId = localStorage.getItem('userId');
@@ -32,6 +33,7 @@ function App() {
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/collection" element={<Collection></Collection>}></Route>
             <Route path="/shop" element={<Shop kibbles={kibbles} setKibbles={setKibbles}></Shop>}></Route>
+            <Route path="/achievements" element={<Achievements kibbles={kibbles} setKibbles={setKibbles}></Achievements>}></Route>
         </Routes>
        : <Login></Login>
        }
