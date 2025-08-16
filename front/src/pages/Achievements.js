@@ -20,7 +20,7 @@ function Achievements(props) {
         .then(res => res.json())
         .then(data => {
             setData(data.Achievements);
-            props.setKibble(props.kibbles + data.kibbles);
+            props.setKibbles(props.kibbles + data.kibbles);
         });
     }
 
