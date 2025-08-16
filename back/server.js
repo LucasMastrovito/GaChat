@@ -176,7 +176,7 @@ app.get('/buysummon/:type/:userId', async (req, res) => {
     res.send('error');
 })
 
-app.get('/summonAchievement/:userId', async (req, res) => {
+app.get('/summonAchievements/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
     let totalRewards = 0;
@@ -184,7 +184,7 @@ app.get('/summonAchievement/:userId', async (req, res) => {
     const totalInvocations = [...user.invocations.values()].reduce((a, b) => a + b, 0);
     let currentLevel = user.achievements.invocations || 0;
 
-    while (totalInvocations >= (currentLevel + 1) * 10) {
+    if (totalInvocations >= (currentLevel + 1) * 10) {
         currentLevel++;
         totalRewards += currentLevel * 10;
     }
@@ -204,7 +204,7 @@ app.get('/collectionAchievements/:userId', async (req, res) => {
     const uniqueCats = user.invocations.size;
     let colLevel = user.achievements.collection || 0;
 
-    while (uniqueCats >= (colLevel + 1) * 10) {
+    if (uniqueCats >= (colLevel + 1) * 10) {
         colLevel++;
         totalRewards += colLevel * 100;
     }
@@ -232,7 +232,7 @@ app.get('/rarityAchievements/:type/:userId', async (req, res) => {
         }
     }
     let rarityLevel = user.achievements.rarity[type] || 0;
-    while (rarityCount >= (rarityLevel + 1) * 3) {
+    if (rarityCount >= (rarityLevel + 1) * 3) {
         rarityLevel++;
         totalRewards += rarityLevel * kibbles.type;
     }

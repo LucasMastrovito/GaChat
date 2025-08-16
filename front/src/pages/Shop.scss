@@ -6,11 +6,13 @@ $gray: #4F5165;
 
 .shop {
     display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: auto auto;
+    grid-template-columns: 45vw 45vw;
     grid-template-rows: repeat(auto-fill, 35vh);
-    margin: 3vw;
+    align-items: end;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
 }
 
 .shop-img {
@@ -24,7 +26,7 @@ $gray: #4F5165;
     justify-content: space-evenly;
 }
 
-.shop-item {
+.shop-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +35,15 @@ $gray: #4F5165;
     background-color: $cinereous;
     border: 3px solid $gunmetal;
     border-radius: 5px;
-    box-shadow: $gunmetal 4px 4px 0 0;
+    box-shadow: $gunmetal 4px 4px 0 0;  
+}
+
+.shop-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30vw;
+    height: 30vh;
 }
 
 .kibbles-pic {
