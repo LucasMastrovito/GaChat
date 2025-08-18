@@ -47,7 +47,7 @@ function Collection() {
 
     return(
         <div>
-            <h2>Bienvenue {localStorage.getItem('userId') === '1' ? "Lucas" : "Alix"} !</h2>
+            <h2>Bienvenue {localStorage.getItem('username')} !</h2>
             <div className="collection_header shadow">
                 <div className="collection_bar">
                     <p>{total} chats invoqués</p>
