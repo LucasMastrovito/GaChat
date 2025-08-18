@@ -18,7 +18,7 @@ const catsData = JSON.parse(fs.readFileSync('cats.json','utf8'));
 async function createUser(id) {
     const user = new User({
         id: id,
-        name: id === 1 ? "Lucas" : "Alix"
+        name: id === 1 ? "Lucas" : id === 2 ? "Alix" : "Romane"
     });
 
     await user.save();
