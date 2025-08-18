@@ -31,7 +31,7 @@ function Achievements(props) {
                 <ShopItem name={`${(Data.invocations + 1) * 10} chats invoqués`} img='/abonnement.png' price={`${(Data.invocations + 1) * 10}`} click={() =>check('summonAchievements')}></ShopItem>
                 <ShopItem name={`${(Data.collection + 1) * 10} chats collectés`} img='/abonnement.png' price={(Data.collection + 1) * 100} click={() =>check('collectionAchievements')}></ShopItem>
                 <ShopItem name={`${(Data.rarity.rare + 1) * 3} chats rares`} img='/rarity/rare.png' price={(Data.rarity.rare + 1) * 10} click={() => check('rarityAchievements/rare')}></ShopItem>
-                <ShopItem name={`${(Data.rarity.mythic + 1) * 3} chats mythique`} img='/rarity/mythic.png' price={(Data.rarity.mythic + 1) * 30} click={() =>check('rarityAchievements/mythic')}></ShopItem>
+                <ShopItem name={`${(Data.rarity.mythic + 1) * 3} chats mythiques`} img='/rarity/mythic.png' price={(Data.rarity.mythic + 1) * 30} click={() =>check('rarityAchievements/mythic')}></ShopItem>
                 <ShopItem name={`${(Data.rarity.legendary + 1) * 3} chats légendaires`} img='/rarity/legendary.png' price={(Data.rarity.legendary + 1) * 50} click={() =>check('rarityAchievements/legendary')}></ShopItem>
                 <ShopItem name={`${(Data.rarity.divin + 1) * 3} chats divins`} img='/rarity/divin.png' price={(Data.rarity.divin + 1) * 100} click={() =>check('rarityAchievements/divin')}></ShopItem>
             </div>
