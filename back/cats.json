@@ -339,6 +339,21 @@
 {
     "id": "Chakivachezlecoiffeur",
     "rarity": "basique"
+},
+
+{
+    "id": "Chaaris",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chariche",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chakibrasse",
+    "rarity": "mythic"
 }
 
 ]
