@@ -24,6 +24,28 @@ $gray: #4F5165;
 
 .summon_gif {
     height: 60vh;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes newgif {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.newgif {
+    color: mediumvioletred;
+    font-size: xx-large;
+    animation: newgif 1s 1 linear;
 }
 
 .gif {

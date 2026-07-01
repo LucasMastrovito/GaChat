@@ -5,6 +5,7 @@ import SummonAnimation from "../SummonAnimation";
 function Summon() {
     const [Data, setData] = useState({});
     const [Url, setUrl] = useState('');
+    const [Newgif, setNewgif] = useState(false);
     const [attemps, setAttemps] = useState(null);
     const [allAttemps, setAllAttemps] = useState({rare: 0, mythic: 0, legendary: 0});
     const [animKey, setAnimKey] = useState(0);
@@ -33,6 +34,7 @@ function Summon() {
             } else {
                 setData(data);
                 setUrl(data.id.toLowerCase());
+                setNewgif(data.newgif);
                 setAnimKey(animKey + 1);
             }
         });
@@ -58,6 +60,7 @@ function Summon() {
                     name={Data.id}
                     onComplete={summonComplete}
                 />
+                {/* <h2 className="newgif">{Newgif ? 'NEW !' : ''}</h2> */}
             </div>
              :
             <div className="summon_gif">
