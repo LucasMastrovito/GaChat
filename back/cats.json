@@ -459,6 +459,31 @@
 {
     "id": "Kettyparkour",
     "rarity": "divin"
+},
+
+{
+    "id": "Chakicri",
+    "rarity": "rare"
+},
+
+{
+    "id": "Chadegueulasse",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakimark",
+    "rarity": "basique"
+},
+
+{
+    "id": "Chakifuck",
+    "rarity": "mythic"
+},
+
+{
+    "id": "Chakisordelasieste",
+    "rarity": "legendary"
 }
 
 ]
