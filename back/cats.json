@@ -372,7 +372,7 @@
 },
 
 {
-    "id": "Chafusée",
+    "id": "Chafusee",
     "rarity": "rare"
 },
 
@@ -448,6 +448,16 @@
 
 {
     "id": "Nalastar",
+    "rarity": "divin"
+},
+
+{
+    "id": "Kettystretch",
+    "rarity": "divin"
+},
+
+{
+    "id": "Kettyparkour",
     "rarity": "divin"
 }
 
