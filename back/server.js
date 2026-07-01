@@ -79,6 +79,8 @@ app.get('/summon/:type/:user', async (req, res) => {
     const randomCat = pool[randomIndex];
 
     const count = user.invocations.get(randomCat.id) || 0;
+    const newgif = count === 0 ? true : false;
+    randomCat['newgif'] = newgif;
     user.invocations.set(randomCat.id, count + 1);
 
     await user.save();
