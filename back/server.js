@@ -150,9 +150,8 @@ app.get('/kibbles/:userId', async (req, res) => {
 app.get('/teams/:user', async (req, res) => {
     const userId = parseInt(req.params.user);
     const user = await User.findOne({ id: userId });
-    const teams = Object.fromEntries(user.teams);
 
-    res.json(teams);
+    res.send(user.teams);
 })
 
 app.get('/buysummon/:type/:userId', async (req, res) => {
