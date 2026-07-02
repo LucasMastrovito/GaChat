@@ -147,6 +147,14 @@ app.get('/kibbles/:userId', async (req, res) => {
     res.json({ kibbles: user.kibbles });
 });
 
+app.get('/teams/:user', async (req, res) => {
+    const userId = parseInt(req.params.user);
+    const user = await User.findOne({ id: userId });
+    const teams = Object.fromEntries(user.teams);
+
+    res.json(teams);
+})
+
 app.get('/buysummon/:type/:userId', async (req, res) => {
     const type = req.params.type;
     const userId = parseInt(req.params.userId);

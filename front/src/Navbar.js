@@ -22,7 +22,7 @@ function Navbar(props) {
             </header>
             <div className="navbar shadow">
                 <button className="nav" value='/login' onClick={click}>Login</button>
-                <button className="nav" value='/summon' onClick={click}>Invoquer</button>
+                <button className="nav" value='/menu' onClick={click}>Menu</button>
                 <button className="nav" value='/collection' onClick={click}>Chakidex</button>
             </div>
         </div>

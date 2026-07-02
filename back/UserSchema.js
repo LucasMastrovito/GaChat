@@ -17,7 +17,8 @@ const userSchema = new Schema({
         invocations: { type: Number, default: 0 },
         collection: { type: Number, default: 0 },
         rarity: { type: Map, of: Number, default: {} }
-    }
+    },
+    teams: { type: Array, default: [] }
 });
 
 const User = mongoose.model('User', userSchema);

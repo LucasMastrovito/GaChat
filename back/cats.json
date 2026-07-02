@@ -1,489 +1,487 @@
-
 [
-
-{
-    "id": "Putiang",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chapakonten",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Charabe",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Channiversaire",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Putiang le Bleu",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakidort",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakirock",
-    "rarity": "basique"
-},
-
-{
-    "id": "ChaAAAAAAA",
-    "rarity": "mythic"
-},
-
-{
-    "id": "ChaCHIPICHAPA",
-    "rarity": "rare"
-},
-
-{
-    "id": "ChaOIIAOIIAI",
-    "rarity": "legendary"
-},
-
-{
-    "id": "ChaOUPIGOUPI",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chachakijuge",
-    "rarity": "divin"
-},
-
-{
-    "id": "Chachalefou",
-    "rarity": "divin"
-},
-
-{
-    "id": "Chafeu",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakidanse",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakisambiance",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakidisparait",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakimange",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakimusique",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakipleure",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakiprendlebain",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakira",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakonten",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakiss",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chanrv",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chapensif",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chapipou",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chapluie",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chaporte",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chasad",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chatrain",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chatriste",
-    "rarity": "basique"
-},
-
-{
-    "id": "Kettychokbar",
-    "rarity": "divin"
-},
-
-{
-    "id": "Kettysleep",
-    "rarity": "divin"
-},
-
-{
-    "id": "Naladies",
-    "rarity": "divin"
-},
-
-{
-    "id": "Nalarevives",
-    "rarity": "divin"
-},
-
-{
-    "id": "Chabigmac",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakiflop",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakiveupaparler",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakisefaitaper",
-    "rarity": "basique"
-},
-
-{
-    "id": "Charip",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakistalk",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakiregardelhorizon",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chadescalier",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakitombe",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chakifail",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakihurle",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chaelectrriicien",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakisefechier",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakideprime",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chahjevois",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chalix",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chakimeur",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakivi",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakiremeur",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakisenva",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakiexplose",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chaclavier",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakigeek",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakigobe",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chahouilavrraiment",
-    "rarity": "mythic"
-},
-
-{
-    "id": "CestLarry",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakiconduit",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakibrule",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chasoucanicule",
-    "rarity": "basique"
-},
-
-{
-    "id": "Putiang Sous Drogue",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chadieu",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakivachezlecoiffeur",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chaaris",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chariche",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakibrasse",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chadelaforet",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakidecede",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chagression",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chafusee",
-    "rarity": "rare"
-},
-
-{
-    "id": "Charetard",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakiskate",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakipend",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakisexcite",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chakidiesfromcringe",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chatuyeau",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chakivasecoucher",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chafou",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chakisattrist",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakiwat",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chakietrangle",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chatontrist",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakirealise",
-    "rarity": "legendary"
-},
-
-{
-    "id": "Chablablabla",
-    "rarity": "rare"
-},
-
-{
-    "id": "Nalastar",
-    "rarity": "divin"
-},
-
-{
-    "id": "Kettystretch",
-    "rarity": "divin"
-},
-
-{
-    "id": "Kettyparkour",
-    "rarity": "divin"
-},
-
-{
-    "id": "Chakicri",
-    "rarity": "rare"
-},
-
-{
-    "id": "Chadegueulasse",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakimark",
-    "rarity": "basique"
-},
-
-{
-    "id": "Chakifuck",
-    "rarity": "mythic"
-},
-
-{
-    "id": "Chakisordelasieste",
-    "rarity": "legendary"
-}
-
+    {
+        "id": "Putiang",
+        "rarity": "legendary",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chapakonten",
+        "rarity": "legendary",
+        "type": "Mignon"
+    },
+    {
+        "id": "Charabe",
+        "rarity": "legendary",
+        "type": "Etrange"
+    },
+    {
+        "id": "Channiversaire",
+        "rarity": "legendary",
+        "type": "Etrange"
+    },
+    {
+        "id": "Putiang le Bleu",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakidort",
+        "rarity": "basique",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakirock",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "ChaAAAAAAA",
+        "rarity": "mythic",
+        "type": "Idiot"
+    },
+    {
+        "id": "ChaCHIPICHAPA",
+        "rarity": "rare",
+        "type": "Mignon"
+    },
+    {
+        "id": "ChaOIIAOIIAI",
+        "rarity": "legendary",
+        "type": "Zoomies"
+    },
+    {
+        "id": "ChaOUPIGOUPI",
+        "rarity": "rare",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chachakijuge",
+        "rarity": "divin",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chachalefou",
+        "rarity": "divin",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chafeu",
+        "rarity": "basique",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakidanse",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakisambiance",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakidisparait",
+        "rarity": "mythic",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakimange",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakimusique",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakipleure",
+        "rarity": "mythic",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakiprendlebain",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakira",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakonten",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakiss",
+        "rarity": "mythic",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chanrv",
+        "rarity": "mythic",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chapensif",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chapipou",
+        "rarity": "basique",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chapluie",
+        "rarity": "rare",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chaporte",
+        "rarity": "rare",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chasad",
+        "rarity": "legendary",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chatrain",
+        "rarity": "legendary",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chatriste",
+        "rarity": "basique",
+        "type": "Mignon"
+    },
+    {
+        "id": "Kettychokbar",
+        "rarity": "divin",
+        "type": "Etrange"
+    },
+    {
+        "id": "Kettysleep",
+        "rarity": "divin",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Naladies",
+        "rarity": "divin",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Nalarevives",
+        "rarity": "divin",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chabigmac",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakiflop",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakiveupaparler",
+        "rarity": "basique",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakisefaitaper",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Charip",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakistalk",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakiregardelhorizon",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chadescalier",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakitombe",
+        "rarity": "legendary",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakifail",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakihurle",
+        "rarity": "rare",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chaelectrriicien",
+        "rarity": "mythic",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakisefechier",
+        "rarity": "basique",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakideprime",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chahjevois",
+        "rarity": "legendary",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chalix",
+        "rarity": "legendary",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakimeur",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakivi",
+        "rarity": "rare",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakiremeur",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakisenva",
+        "rarity": "rare",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakiexplose",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chaclavier",
+        "rarity": "basique",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakigeek",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakigobe",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chahouilavrraiment",
+        "rarity": "mythic",
+        "type": "Etrange"
+    },
+    {
+        "id": "CestLarry",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakiconduit",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakibrule",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chasoucanicule",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Putiang Sous Drogue",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chadieu",
+        "rarity": "rare",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chakivachezlecoiffeur",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chaaris",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chariche",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakibrasse",
+        "rarity": "mythic",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chadelaforet",
+        "rarity": "mythic",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakidecede",
+        "rarity": "legendary",
+        "type": "Flemmard"
+    },
+    {
+        "id": "Chagression",
+        "rarity": "legendary",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chafusee",
+        "rarity": "rare",
+        "type": "Etrange"
+    },
+    {
+        "id": "Charetard",
+        "rarity": "mythic",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakiskate",
+        "rarity": "rare",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakipend",
+        "rarity": "basique",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakisexcite",
+        "rarity": "legendary",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakidiesfromcringe",
+        "rarity": "basique",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chatuyeau",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakivasecoucher",
+        "rarity": "legendary",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chafou",
+        "rarity": "legendary",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakisattrist",
+        "rarity": "mythic",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakiwat",
+        "rarity": "legendary",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chakietrangle",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chatontrist",
+        "rarity": "mythic",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakirealise",
+        "rarity": "legendary",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chablablabla",
+        "rarity": "rare",
+        "type": "Etrange"
+    },
+    {
+        "id": "Nalastar",
+        "rarity": "divin",
+        "type": "Idiot"
+    },
+    {
+        "id": "Kettystretch",
+        "rarity": "divin",
+        "type": "Mignon"
+    },
+    {
+        "id": "Kettyparkour",
+        "rarity": "divin",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakicri",
+        "rarity": "rare",
+        "type": "Idiot"
+    },
+    {
+        "id": "Chadegueulasse",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakimark",
+        "rarity": "basique",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakifuck",
+        "rarity": "mythic",
+        "type": "Zoomies"
+    },
+    {
+        "id": "Chakisordelasieste",
+        "rarity": "legendary",
+        "type": "Mignon"
+    }
 ]
