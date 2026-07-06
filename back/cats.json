@@ -483,5 +483,10 @@
         "id": "Chakisordelasieste",
         "rarity": "legendary",
         "type": "Mignon"
+    },
+    {
+        "id": "Chakidepop",
+        "rarity": "mythic",
+        "type": "Etrange"
     }
 ]
