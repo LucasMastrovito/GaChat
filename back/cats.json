@@ -488,5 +488,20 @@
         "id": "Chakidepop",
         "rarity": "mythic",
         "type": "Etrange"
+    },
+    {
+        "id": "Chakisniff",
+        "rarity": "mythic",
+        "type": "Etrange"
+    },
+    {
+        "id": "Chakiattend",
+        "rarity": "rare",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakisimpatiente",
+        "rarity": "basique",
+        "type": "Flemmard"
     }
 ]
