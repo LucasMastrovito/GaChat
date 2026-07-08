@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import Achievements from './pages/Achievements';
 import Menu from './pages/Menu';
 import Teams from './pages/Teams';
+import Fight from './pages/Fight';
 
 function App() {
   const storedUserId = localStorage.getItem('userId');
@@ -34,6 +35,7 @@ function App() {
             <Route path="/menu" element={<Menu></Menu>}></Route>
             <Route path="/summon" element={<Summon></Summon>}></Route>
             <Route path="/teams" element={<Teams></Teams>}></Route>
+            <Route path="/fight" element={<Fight></Fight>}></Route>
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/collection" element={<Collection></Collection>}></Route>
             <Route path="/shop" element={<Shop kibbles={kibbles} setKibbles={setKibbles}></Shop>}></Route>

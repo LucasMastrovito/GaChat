@@ -108,7 +108,8 @@ app.get('/collection/:user', async (req, res) => {
         return {
             id: chatId,
             count,
-            rarity: cat ? cat.rarity : 'unknown'
+            rarity: cat ? cat.rarity : 'unknown',
+            type: cat ? cat.type : 'unknown'
         };
     });
     res.json(collection);

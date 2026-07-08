@@ -1,6 +1,12 @@
 function Team(props) {
+    const click = () => {
+        if (props.click) {
+            props.click(props.index);
+        }
+    }
+
     return (
-        <div className="team shadow">
+        <div className="team shadow" onClick={click}>
             <h2>{props.name}</h2>
             <div className="teamCats">
                 <div>
