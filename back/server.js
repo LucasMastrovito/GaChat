@@ -7,6 +7,8 @@ app.use(cors({
     origin: '*'
 }));
 
+app.use(express.json());
+
 const port = 3000
 const db = require('./db.js')
 db();
