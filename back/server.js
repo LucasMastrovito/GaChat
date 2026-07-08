@@ -257,6 +257,23 @@ app.get('/getAchievements/:userId', async (req, res) => {
     res.json(user.achievements);
 })
 
+app.post('/addteam', async (req, res) => {
+    const { userId, name, slots } = req.body;
+    const user = await User.findOne({ id: userId });
+
+    if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+
+    user.teams.push(
+        {
+            name: name,
+            cats: slots
+        }
+    );
+    user.save();
+    console.log("New team added");
+    res.send("OK");
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
