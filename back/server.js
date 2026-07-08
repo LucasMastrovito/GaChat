@@ -274,7 +274,7 @@ app.post('/addteam', async (req, res) => {
         await user.save();
 
         console.log("New team added");
-        res.send("OK");
+        res.json('ok');
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: err.message });

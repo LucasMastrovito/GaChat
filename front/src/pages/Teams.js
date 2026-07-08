@@ -12,6 +12,7 @@ function Teams() {
     const [active, setActive] = useState(0);
     const activeRef = useRef(0);
     const [slots, setSlots] = useState(['', '', '']);
+    const [reload, setReload] = useState(false);
 
 
     const activeSlot = (index) => {
@@ -58,7 +59,8 @@ function Teams() {
 
         get();
         getCats();
-    }, [])
+        setReload(false);
+    }, [reload])
 
     function handleChange(e) {
         setName(e.target.value);
@@ -89,6 +91,7 @@ function Teams() {
                 console.error('Erreur lors du POST:', err);
             }
         }
+        setReload(true);
         setAdd(false);
     }
 
