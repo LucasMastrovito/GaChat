@@ -13,7 +13,7 @@ db();
 const User = require('./UserSchema');
 const fs = require('fs')
 
-const catsData = JSON.parse(fs.readFileSync('cats.json','utf8'));
+const catsData = JSON.parse(fs.readFileSync('cats.json', 'utf8'));
 
 async function createUser(id) {
     const user = new User({
@@ -50,28 +50,28 @@ app.get('/summon/:type/:user', async (req, res) => {
                 rarity = 'rare';
             }
         } else {
-            res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            res.json({ basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary });
         }
     } else if (type === 'rare') {
         if (user.attempsRare > 0) {
             user.attempsRare--;
             rarity = 'rare';
         } else {
-            res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            res.json({ basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary });
         }
     } else if (type === 'mythic') {
         if (user.attempsMythic > 0) {
             user.attempsMythic--;
             rarity = 'mythic';
         } else {
-            res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            res.json({ basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary });
         }
     } else if (type === 'legendary') {
         if (user.attempsLegendary > 0) {
             user.attempsLegendary--;
             rarity = 'legendary';
         } else {
-            res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+            res.json({ basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary });
         }
     }
     pool = catsData.filter(cat => cat.rarity === rarity);
@@ -118,14 +118,14 @@ app.get('/attemps/:user', async (req, res) => {
     const now = new Date();
     const resetDelay = 8 * 60 * 60 * 1000;
 
-     if (!user.lastreset || now - new Date(user.lastreset) >= resetDelay) {
+    if (!user.lastreset || now - new Date(user.lastreset) >= resetDelay) {
         user.attemps += 5;
         user.lastreset = now;
         await user.save();
         console.log('Attemps reset for ' + user.name + ' at ' + now);
     }
 
-    res.json({basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary});
+    res.json({ basic: user.attemps, rare: user.attempsRare, mythic: user.attempsMythic, legendary: user.attempsLegendary });
 })
 
 app.get('/kibbles/:userId', async (req, res) => {
@@ -200,7 +200,7 @@ app.get('/summonAchievements/:userId', async (req, res) => {
     user.kibbles += totalRewards;
     await user.save();
 
-    res.json({kibbles: totalRewards, achievements: user.achievements});
+    res.json({ kibbles: totalRewards, achievements: user.achievements });
 })
 
 app.get('/collectionAchievements/:userId', async (req, res) => {
@@ -219,18 +219,18 @@ app.get('/collectionAchievements/:userId', async (req, res) => {
     user.kibbles += totalRewards;
     await user.save();
 
-    res.json({kibbles: totalRewards, achievements: user.achievements});
+    res.json({ kibbles: totalRewards, achievements: user.achievements });
 })
 
 app.get('/rarityAchievements/:type/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
     const type = req.params.type;
-    const reward = { rare: 10, mythic: 30, legendary: 50, divin: 100};
+    const reward = { rare: 10, mythic: 30, legendary: 50, divin: 100 };
     let totalRewards = 0;
 
     if (!user.achievements.rarity) user.achievements.rarity = {};
-        let rarityCount = 0;
+    let rarityCount = 0;
 
     for (let [catId, count] of user.invocations.entries()) {
         const cat = catsData.find(c => c.id == catId);
@@ -247,7 +247,7 @@ app.get('/rarityAchievements/:type/:userId', async (req, res) => {
     user.kibbles += totalRewards;
     await user.save();
 
-    res.json({kibbles: totalRewards, achievements: user.achievements});
+    res.json({ kibbles: totalRewards, achievements: user.achievements });
 })
 
 app.get('/getAchievements/:userId', async (req, res) => {
@@ -258,22 +258,27 @@ app.get('/getAchievements/:userId', async (req, res) => {
 })
 
 app.post('/addteam', async (req, res) => {
-    const { userId, name, slots } = req.body;
-    const user = await User.findOne({ id: userId });
+    try {
+        const { userId, name, slots } = req.body;
+        const user = await User.findOne({ id: userId });
 
-    if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+        if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
 
-    user.teams.push(
-        {
+        user.teams.push({
             name: name,
             cats: slots
-        }
-    );
-    user.save();
-    console.log("New team added");
-    res.send("OK");
+        });
+
+        await user.save();
+
+        console.log("New team added");
+        res.send("OK");
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
+    }
 })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+    console.log(`Example app listening on port ${port}`)
 })
