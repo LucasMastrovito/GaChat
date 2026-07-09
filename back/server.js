@@ -328,7 +328,6 @@ app.post('/addlose', async (req, res) => {
 })
 
 app.get('/winrate/:userId', async (req, res) => {
-    const { userId, name, slots } = req.body;
     const user = await User.findOne({ id: userId });
 
     if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
