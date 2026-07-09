@@ -84,6 +84,9 @@ app.get('/summon/:type/:user', async (req, res) => {
     const newgif = count === 0 ? true : false;
     randomCat['newgif'] = newgif;
     user.invocations.set(randomCat.id, count + 1);
+    if (newgif) {
+        user.levels.set(randomCat.id, 1);
+    }
 
     await user.save();
     res.json(randomCat);
@@ -109,7 +112,8 @@ app.get('/collection/:user', async (req, res) => {
             id: chatId,
             count,
             rarity: cat ? cat.rarity : 'unknown',
-            type: cat ? cat.type : 'unknown'
+            type: cat ? cat.type : 'unknown',
+            level: user.levels[chatId] ?? 1
         };
     });
     res.json(collection);
@@ -328,11 +332,12 @@ app.post('/addlose', async (req, res) => {
 })
 
 app.get('/winrate/:userId', async (req, res) => {
+    const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
 
     if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
 
-    res.json({win: user.wins, lose: user.loses});
+    res.json({ win: user.wins, lose: user.loses });
 })
 
 app.listen(port, () => {

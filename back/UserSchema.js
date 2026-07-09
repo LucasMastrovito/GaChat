@@ -11,6 +11,7 @@ const userSchema = new Schema({
     attempsLegendary: { type: Number, default: 0 },
     lastreset: { type: Date, default: null },
     invocations: { type: Map, of: Number, default: {} },
+    levels: { type: Map, of: Number, default: {} },
     kibbles: { type: Number, default: 0 },
     lastConnexion: { type: Date, default: new Date() },
     achievements: {
