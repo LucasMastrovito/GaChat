@@ -301,7 +301,7 @@ app.post('/delteam', async (req, res) => {
     }
 })
 
-app.update('/addwin', async (req, res) => {
+app.post('/addwin', async (req, res) => {
     const { userId, name, slots } = req.body;
     const user = await User.findOne({ id: userId });
 
@@ -314,7 +314,7 @@ app.update('/addwin', async (req, res) => {
     res.json(user);
 })
 
-app.update('/addlose', async (req, res) => {
+app.post('/addlose', async (req, res) => {
     const { userId, name, slots } = req.body;
     const user = await User.findOne({ id: userId });
 

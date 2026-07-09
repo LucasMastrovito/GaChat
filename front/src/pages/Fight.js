@@ -71,7 +71,7 @@ function Fight() {
                                 onBattleEnd={async (winner) => {
                                     const didWin = winner === "B";
                                     await fetch('https://gachat.onrender.com/' + didWin ? 'addwin' : 'addlose', {
-                                        method: 'UPDATE',
+                                        method: 'POST',
                                         headers: { 'Content-Type': 'application/json' }
                                     });
                                 }}
