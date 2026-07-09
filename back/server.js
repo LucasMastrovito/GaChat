@@ -282,6 +282,25 @@ app.post('/addteam', async (req, res) => {
     }
 })
 
+app.post('/delteam', async (req, res) => {
+    try {
+        const { userId, name, slots } = req.body;
+        const user = await User.findOne({ id: userId });
+
+        if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+
+        user.teams.filter(obj => obj.name === name && obj.cats === slots);
+
+        await user.save();
+
+        console.log("Team Removed");
+        res.json('ok');
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
+    }
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
