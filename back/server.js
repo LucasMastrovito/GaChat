@@ -331,7 +331,7 @@ app.post('/addlose', async (req, res) => {
     res.json(user);
 })
 
-app.get('/winrate/  ', async (req, res) => {
+app.get('/winrate/:userId', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
 
