@@ -306,7 +306,7 @@ app.post('/delteam', async (req, res) => {
 })
 
 app.post('/addwin', async (req, res) => {
-    const { userId, name, slots } = req.body;
+    const { userId } = req.body;
     const user = await User.findOne({ id: userId });
 
     if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
@@ -319,7 +319,7 @@ app.post('/addwin', async (req, res) => {
 })
 
 app.post('/addlose', async (req, res) => {
-    const { userId, name, slots } = req.body;
+    const { userId } = req.body;
     const user = await User.findOne({ id: userId });
 
     if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
@@ -331,7 +331,7 @@ app.post('/addlose', async (req, res) => {
     res.json(user);
 })
 
-app.get('/winrate/:userId', async (req, res) => {
+app.get('/winrate/  ', async (req, res) => {
     const userId = parseInt(req.params.userId);
     const user = await User.findOne({ id: userId });
 

@@ -72,7 +72,10 @@ function Fight() {
                                     const didWin = winner === "B";
                                     await fetch('https://gachat.onrender.com/' + didWin ? 'addwin' : 'addlose', {
                                         method: 'POST',
-                                        headers: { 'Content-Type': 'application/json' }
+                                        headers: { 'Content-Type': 'application/json' },
+                                        body: JSON.stringify({
+                                            userId: localStorage.getItem('userId')
+                                        })
                                     });
                                 }}
                             />
@@ -88,7 +91,7 @@ function Fight() {
                 :
                 <div>
                     <h3>{winrate.win} Victoires / {winrate.lose} Défaites</h3>
-                <button className="btn" onClick={launch} style={{ marginTop: '5vh' }}>Combattre</button>
+                    <button className="btn" onClick={launch} style={{ marginTop: '5vh' }}>Combattre</button>
                 </div>
             }
         </div >
