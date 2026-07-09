@@ -4,7 +4,7 @@ import "./Arena.scss";
 
 // ---- Stats de base par type (bruts, à ajuster au feeling) ----
 const TYPE_STATS = {
-    mignon:   { hp: 90,  attack: 45, defense: 15, speed: 18 },
+    mignon:   { hp: 90,  attack: 40, defense: 15, speed: 20 },
     zoomies:  { hp: 80,  attack: 50, defense: 10, speed: 25 },
     flemmard: { hp: 120, attack: 35, defense: 25, speed: 8  },
     silly:    { hp: 100, attack: 42, defense: 18, speed: 15 },
@@ -89,6 +89,7 @@ function Arena({ teamAIds, teamBIds, allCats, onBattleEnd }) {
     const [flash, setFlash] = useState(null); // { side: 'A'|'B', damage: number } pour l'animation
     const [winner, setWinner] = useState(null);
     const timeoutRef = useRef(null);
+    const battleEndedRef = useRef(false);
     const navigate = useNavigate();
 
     const activeA = fightersA[activeAIndex];
@@ -124,7 +125,12 @@ function Arena({ teamAIds, teamBIds, allCats, onBattleEnd }) {
     }
 
     function playRound() {
-        const attackerFirst = activeA.speed >= activeB.speed ? "A" : "B";
+        let attackerFirst;
+        if (activeA.speed === activeB.speed) {
+            attackerFirst = Math.random() < 0.5 ? "A" : "B";
+        } else {
+            attackerFirst = activeA.speed > activeB.speed ? "A" : "B";
+        }
         const order = attackerFirst === "A" ? ["A", "B"] : ["B", "A"];
 
         let localA = { ...activeA };
@@ -182,12 +188,13 @@ function Arena({ teamAIds, teamBIds, allCats, onBattleEnd }) {
                 const nextA = prevA.findIndex(f => f.alive);
                 const nextB = prevB.findIndex(f => f.alive);
 
-                if (nextA === -1) {
-                    setWinner("B");
-                    onBattleEnd && onBattleEnd("B");
-                } else if (nextB === -1) {
-                    setWinner("A");
-                    onBattleEnd && onBattleEnd("A");
+                if (nextA === -1 || nextB === -1) {
+                    if (!battleEndedRef.current) {
+                        battleEndedRef.current = true;
+                        const result = nextA === -1 ? "B" : "A";
+                        setWinner(result);
+                        onBattleEnd && onBattleEnd(result);
+                    }
                 } else {
                     setActiveAIndex(nextA);
                     setActiveBIndex(nextB);

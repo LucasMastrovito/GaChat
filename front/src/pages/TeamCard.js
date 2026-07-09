@@ -11,6 +11,7 @@ function TeamCard(props) {
             <div className='card'>
                 <img className="gif_collec shadow-gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + url + '.gif'}></img>
             </div>
+            <p>{props.type}</p>
         </div>
     )
 }

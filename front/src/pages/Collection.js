@@ -27,7 +27,7 @@ function Collection() {
                 return rarityOrder.indexOf(a.rarity) - rarityOrder.indexOf(b.rarity);
             });
             const newCards = sortedData.map(item => (
-                <Card key={item.id} id={item.id} nb={item.count} rarity={item.rarity} />
+                <Card key={item.id} id={item.id} nb={item.count} rarity={item.rarity} type={item.type} />
             ));
             setDisplay(newCards);
 

@@ -51,7 +51,7 @@ function Teams() {
                 return rarityOrder.indexOf(a.rarity) - rarityOrder.indexOf(b.rarity);
             });
             const newCards = sortedData.map(item => (
-                <TeamCard key={item.id} id={item.id} nb={item.count} click={updateSlot} />
+                <TeamCard key={item.id} id={item.id} type={item.type} click={updateSlot} />
             ));
             setDisplay(newCards);
         };

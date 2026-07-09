@@ -9,8 +9,11 @@ function Card(props) {
                 <img className="gif_collec shadow-gif" alt="cat" src={'https://raw.githubusercontent.com/LucasMastrovito/GaChat/main/public/' + url + '.gif'}></img>
             </div>
             <div className="infos shadow">
-                <img alt="rarity" src={'/rarity/' + rarity + '.png'} style={{width: '10vw'}} />
-                <p>{props.nb}</p>
+                <p>{props.type}</p>
+                <div style={{display: 'flex', justifyContent: 'space-around', alignItems: 'center', width: '100%'}}>
+                    <img alt="rarity" src={'/rarity/' + rarity + '.png'} style={{ width: '10vw' }} />
+                    <p>{props.nb}</p>
+                </div>
             </div>
         </div>
     )

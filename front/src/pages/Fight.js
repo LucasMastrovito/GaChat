@@ -70,7 +70,7 @@ function Fight() {
                                 allCats={cats}
                                 onBattleEnd={async (winner) => {
                                     const didWin = winner === "B";
-                                    await fetch('https://gachat.onrender.com/' + didWin ? 'addwin' : 'addlose', {
+                                    await fetch(`https://gachat.onrender.com/${didWin ? 'addwin' : 'addlose'}`, {
                                         method: 'POST',
                                         headers: { 'Content-Type': 'application/json' },
                                         body: JSON.stringify({
@@ -81,7 +81,7 @@ function Fight() {
                             />
                         </div>
                         :
-                        <div>
+                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                             {enemyTeam}
                             < h2 > Choisi une équipe</h2>
                             {userTeams}
