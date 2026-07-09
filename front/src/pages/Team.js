@@ -21,6 +21,7 @@ function Team(props) {
                 cats
             })
         });
+        window.location.reload();
     }
 
     return (
