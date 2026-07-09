@@ -289,7 +289,7 @@ app.post('/delteam', async (req, res) => {
 
         if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
 
-        user.teams.filter(obj => obj.name === name && obj.cats === slots);
+        user.teams = user.teams.filter(obj => obj.name !== name && obj.cats !== slots);
 
         await user.save();
 

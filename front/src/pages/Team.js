@@ -1,8 +1,26 @@
 function Team(props) {
+    const name = props.name;
+    const cats = props.cats;
+
     const click = () => {
         if (props.click) {
             props.click(props.cats);
         }
+    }
+
+    const remove = async () => {
+        console.log(cats);
+        await fetch('https://gachat.onrender.com/delteam', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                userId: localStorage.getItem('userId'),
+                name,
+                cats
+            })
+        });
     }
 
     return (
@@ -22,7 +40,7 @@ function Team(props) {
                     <p>{props.cats[2]}</p>
                 </div>
             </div>
-
+            <button className="btn" onClick={remove}>Supprimer</button>
         </div>
     )
 }
