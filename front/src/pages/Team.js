@@ -1,7 +1,7 @@
 function Team(props) {
     const click = () => {
         if (props.click) {
-            props.click(props.index);
+            props.click(props.cats);
         }
     }
 

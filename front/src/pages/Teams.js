@@ -34,7 +34,6 @@ function Teams() {
         const get = async () => {
             const res = await fetch('https://gachat.onrender.com/teams/' + localStorage.getItem('userId'));
             const data = await res.json();
-            console.log(data)
 
             const newCards = data.map((element, index) =>
                 <Team key={index} name={element.name} cats={element.cats} />

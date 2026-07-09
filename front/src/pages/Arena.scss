@@ -1,0 +1,170 @@
+.battle-arena {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh;
+}
+
+.battle-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2vh;
+    width: 100%;
+}
+
+.fighter-left {
+    order: 1; // équipe ennemie (teamA) en haut
+}
+
+.vs {
+    order: 2;
+}
+
+.fighter-right {
+    order: 3; // notre équipe (teamB) en bas
+}
+
+.vs {
+    font-weight: bold;
+    font-size: 1.5rem;
+    opacity: 0.6;
+}
+
+.fighter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 180px;
+    position: relative;
+    transition: transform 0.15s ease;
+
+    &.hit {
+        animation: shake 0.4s ease;
+    }
+}
+
+.fighter-name {
+    font-weight: 600;
+    margin-bottom: 0.3vh;
+}
+
+.fighter-type {
+    font-size: 0.75rem;
+    text-transform: capitalize;
+    opacity: 0.6;
+    margin-bottom: 0.5vh;
+}
+
+.hp-bar-container {
+    width: 100%;
+    height: 12px;
+    background: #333;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.3vh;
+}
+
+.hp-bar {
+    height: 100%;
+    transition: width 0.4s ease, background-color 0.4s ease;
+}
+
+.hp-text {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 0.5vh;
+}
+
+.fighter-image {
+    object-fit: contain;
+}
+
+.damage-popup {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    color: #e53935;
+    font-weight: bold;
+    font-size: 1.2rem;
+    animation: floatUp 1.5s ease forwards;
+    pointer-events: none;
+
+    &.critical {
+        color: #ff9800;
+        font-size: 1.6rem;
+    }
+}
+
+.critical-popup {
+    position: absolute;
+    top: -48px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #ff9800;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: floatUp 1.5s ease forwards;
+    pointer-events: none;
+}
+
+.effectiveness-popup {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    color: #524fff;
+    font-weight: bold;
+    font-size: 0.9rem;
+    animation: floatUp 1.5s ease forwards;
+    pointer-events: none;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    50% { transform: translateX(6px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
+@keyframes floatUp {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-30px); }
+}
+
+.battle-log {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vh;
+    font-size: 0.85rem;
+}
+
+.battle-result {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.battle-result-text {
+    font-size: 3rem !important;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 0;
+}

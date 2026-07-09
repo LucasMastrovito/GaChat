@@ -9,44 +9,42 @@ function Fight() {
     const [inArena, setInArena] = useState(false);
     const [enemies, setEnemies] = useState([]);
     const [enemyTeam, setEnemyTeam] = useState();
-    const [battle, setBattle] = useState();
+    const [battleTeams, setBattleTeams] = useState(null);
 
-    useEffect(() => {
-        const get = async () => {
-            const res = await fetch('https://gachat.onrender.com/teams/' + localStorage.getItem('userId'));
-            const data = await res.json();
+        const chooseTeam = (team) => {
+            setBattleTeams({ teamAIds: enemies, teamBIds: team });
+            setInArena(true);
+        }
 
-            const newCards = data.map((element, index) =>
-                <Team key={index} name={element.name} cats={element.cats} index={index} click={chooseTeam} />
-            );
+        useEffect(() => {
+            const get = async () => {
+                const res = await fetch('https://gachat.onrender.com/teams/' + localStorage.getItem('userId'));
+                const data = await res.json();
 
-            setUserTeams(newCards);
-        };
+                const newCards = data.map((element, index) =>
+                    <Team key={index} name={element.name} cats={element.cats} index={index} click={chooseTeam} />
+                );
+                setUserTeams(newCards);
+            };
 
-        const getCats = async () => {
-            const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
-            const data = await res.json();
+            const getCats = async () => {
+                const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
+                const data = await res.json();
 
-            setCats(data);
-        };
+                setCats(data);
+            };
 
-        get();
-        getCats();
-    }, [])
+            get();
+            getCats();
+        }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const launch = (e) => {
         setEnemies([]);
-        console.log(cats[0])
         enemies.push(cats[Math.floor(Math.random() * cats.length)].id);
         enemies.push(cats[Math.floor(Math.random() * cats.length)].id);
         enemies.push(cats[Math.floor(Math.random() * cats.length)].id);
         setEnemyTeam(<Team name={'Adversaires'} cats={enemies} />);
         setInFight(true);
-    }
-
-    const chooseTeam = (index) => {
-        setBattle(<Arena />)
-        setInArena(true);
     }
 
     return (
@@ -57,7 +55,12 @@ function Fight() {
                 <div>
                     {inArena ?
                         <div>
-                            {battle}
+                            <Arena
+                                teamAIds={battleTeams.teamAIds}
+                                teamBIds={battleTeams.teamBIds}
+                                allCats={cats}
+                                onBattleEnd={(winner) => console.log(winner === "A" ? "Team 1 win" : "Team 2 win")}
+                            />
                         </div>
                         :
                         <div>
