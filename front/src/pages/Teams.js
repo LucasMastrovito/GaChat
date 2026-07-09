@@ -36,7 +36,7 @@ function Teams() {
             const data = await res.json();
 
             const newCards = data.map((element, index) =>
-                <Team key={index} name={element.name} cats={element.cats} />
+                <Team key={index} name={element.name} cats={element.cats} canRemove={true} />
             );
 
             setUserTeams(newCards);

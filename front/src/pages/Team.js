@@ -41,7 +41,11 @@ function Team(props) {
                     <p>{props.cats[2]}</p>
                 </div>
             </div>
-            <button className="btn" onClick={remove}>Supprimer</button>
+            {props.canRemove ?
+                <button className="btn" onClick={remove}>Supprimer</button> :
+                <span />
+            }
+
         </div>
     )
 }

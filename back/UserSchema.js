@@ -18,7 +18,9 @@ const userSchema = new Schema({
         collection: { type: Number, default: 0 },
         rarity: { type: Map, of: Number, default: {} }
     },
-    teams: { type: Array, default: [] }
+    teams: { type: Array, default: [] },
+    wins: { type: Number, default: 0 },
+    loses: { type: Number, default: 0 }
 });
 
 const User = mongoose.model('User', userSchema);

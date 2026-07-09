@@ -10,33 +10,42 @@ function Fight() {
     const [enemies, setEnemies] = useState([]);
     const [enemyTeam, setEnemyTeam] = useState();
     const [battleTeams, setBattleTeams] = useState(null);
+    const [winrate, setWinrate] = useState({});
 
-        const chooseTeam = (team) => {
-            setBattleTeams({ teamAIds: enemies, teamBIds: team });
-            setInArena(true);
-        }
+    const chooseTeam = (team) => {
+        setBattleTeams({ teamAIds: enemies, teamBIds: team });
+        setInArena(true);
+    }
 
-        useEffect(() => {
-            const get = async () => {
-                const res = await fetch('https://gachat.onrender.com/teams/' + localStorage.getItem('userId'));
-                const data = await res.json();
+    useEffect(() => {
+        const get = async () => {
+            const res = await fetch('https://gachat.onrender.com/teams/' + localStorage.getItem('userId'));
+            const data = await res.json();
 
-                const newCards = data.map((element, index) =>
-                    <Team key={index} name={element.name} cats={element.cats} index={index} click={chooseTeam} />
-                );
-                setUserTeams(newCards);
-            };
+            const newCards = data.map((element, index) =>
+                <Team key={index} name={element.name} cats={element.cats} index={index} click={chooseTeam} />
+            );
+            setUserTeams(newCards);
+        };
 
-            const getCats = async () => {
-                const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
-                const data = await res.json();
+        const getCats = async () => {
+            const res = await fetch('https://gachat.onrender.com/collection/' + localStorage.getItem('userId'));
+            const data = await res.json();
 
-                setCats(data);
-            };
+            setCats(data);
+        };
 
-            get();
-            getCats();
-        }, []) // eslint-disable-line react-hooks/exhaustive-deps
+        const getWinrate = async () => {
+            const res = await fetch('https://gachat.onrender.com/winrate/' + localStorage.getItem('userId'));
+            const data = await res.json();
+
+            setWinrate(data);
+        };
+
+        get();
+        getCats();
+        getWinrate();
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
     const launch = (e) => {
         setEnemies([]);
@@ -59,7 +68,13 @@ function Fight() {
                                 teamAIds={battleTeams.teamAIds}
                                 teamBIds={battleTeams.teamBIds}
                                 allCats={cats}
-                                onBattleEnd={(winner) => console.log(winner === "A" ? "Team 1 win" : "Team 2 win")}
+                                onBattleEnd={async (winner) => {
+                                    const didWin = winner === "B";
+                                    await fetch('https://gachat.onrender.com/' + didWin ? 'addwin' : 'addlose', {
+                                        method: 'UPDATE',
+                                        headers: { 'Content-Type': 'application/json' }
+                                    });
+                                }}
                             />
                         </div>
                         :
@@ -71,7 +86,10 @@ function Fight() {
                     }
                 </div>
                 :
+                <div>
+                    <h3>{winrate.win} Victoires / {winrate.lose} Défaites</h3>
                 <button className="btn" onClick={launch} style={{ marginTop: '5vh' }}>Combattre</button>
+                </div>
             }
         </div >
     )

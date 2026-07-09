@@ -301,6 +301,41 @@ app.post('/delteam', async (req, res) => {
     }
 })
 
+app.update('/addwin', async (req, res) => {
+    const { userId, name, slots } = req.body;
+    const user = await User.findOne({ id: userId });
+
+    if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+
+    user.wins += 1;
+    await user.save();
+
+    console.log("Win added");
+    res.json(user);
+})
+
+app.update('/addlose', async (req, res) => {
+    const { userId, name, slots } = req.body;
+    const user = await User.findOne({ id: userId });
+
+    if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+
+    user.loses += 1;
+    await user.save();
+
+    console.log("Lose added");
+    res.json(user);
+})
+
+app.get('/winrate', async (req, res) => {
+    const { userId, name, slots } = req.body;
+    const user = await User.findOne({ id: userId });
+
+    if (!user) return res.status(404).json({ error: 'Utilisateur non trouvé' });
+
+    res.json({win: user.wins, lose: user.loses});
+})
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
