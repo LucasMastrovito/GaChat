@@ -407,7 +407,7 @@
     {
         "id": "Chakivasecoucher",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Flemmard"
     },
     {
         "id": "Chafou",
@@ -508,5 +508,15 @@
         "id": "Chakichill",
         "rarity": "mythic",
         "type": "Flemmard"
+    },
+    {
+        "id": "Chakisereveil",
+        "rarity": "legendary",
+        "type": "Mignon"
+    },
+    {
+        "id": "Chakipete",
+        "rarity": "rare",
+        "type": "Etrange"
     }
 ]
