@@ -113,7 +113,11 @@ app.get('/collection/:user', async (req, res) => {
             count,
             rarity: cat ? cat.rarity : 'unknown',
             type: cat ? cat.type : 'unknown',
-            level: user.levels[chatId] ?? 1
+            level: user.levels[chatId] ?? 1,
+            hp: cat ? cat.hp : 0,
+            attack: cat ? cat.attack : 0,
+            defense: cat ? cat.defense : 0,
+            speed: cat ? cat.speed : 0
         };
     });
     res.json(collection);

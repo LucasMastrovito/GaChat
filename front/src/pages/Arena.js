@@ -4,7 +4,7 @@ import "./Arena.scss";
 
 // ---- Stats de base par type (bruts, à ajuster au feeling) ----
 const TYPE_STATS = {
-    mignon:   { hp: 90,  attack: 40, defense: 15, speed: 20 },
+    mignon:   { hp: 90,  attack: 45, defense: 15, speed: 18 },
     zoomies:  { hp: 80,  attack: 50, defense: 10, speed: 25 },
     flemmard: { hp: 120, attack: 35, defense: 25, speed: 8  },
     silly:    { hp: 100, attack: 42, defense: 18, speed: 15 },
@@ -56,7 +56,10 @@ function computeDamage(attacker, defender) {
 // Ajoute les stats de combat (hp/maxHp/attack/def/speed) à un chat brut {id,name,type,image}
 function buildFighter(cat) {
     const normalizedType = normalize(cat.type);
-    const stats = TYPE_STATS[normalizedType] || TYPE_STATS.silly;
+    const hasIndividualStats = cat.hp != null && cat.attack != null && cat.defense != null && cat.speed != null;
+    const stats = hasIndividualStats
+        ? { hp: cat.hp, attack: cat.attack, defense: cat.defense, speed: cat.speed }
+        : (TYPE_STATS[normalizedType] || TYPE_STATS.silly);
     return {
         ...cat,
         type: normalizedType,

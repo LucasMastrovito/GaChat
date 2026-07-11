@@ -2,521 +2,937 @@
     {
         "id": "Putiang",
         "rarity": "legendary",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 124,
+        "attack": 46,
+        "defense": 25,
+        "speed": 19
     },
     {
         "id": "Chapakonten",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 112,
+        "attack": 49,
+        "defense": 21,
+        "speed": 22
     },
     {
         "id": "Charabe",
         "rarity": "legendary",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 119,
+        "attack": 59,
+        "defense": 18,
+        "speed": 20
     },
     {
         "id": "Channiversaire",
         "rarity": "legendary",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 118,
+        "attack": 64,
+        "defense": 15,
+        "speed": 20
     },
     {
         "id": "Putiang le Bleu",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 121,
+        "attack": 45,
+        "defense": 19,
+        "speed": 14
     },
     {
         "id": "Chakidort",
         "rarity": "basique",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 120,
+        "attack": 39,
+        "defense": 22,
+        "speed": 8
     },
     {
         "id": "Chakirock",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 80,
+        "attack": 56,
+        "defense": 9,
+        "speed": 25
     },
     {
         "id": "ChaAAAAAAA",
         "rarity": "mythic",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 107,
+        "attack": 49,
+        "defense": 21,
+        "speed": 20
     },
     {
         "id": "ChaCHIPICHAPA",
         "rarity": "rare",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 96,
+        "attack": 47,
+        "defense": 15,
+        "speed": 18
     },
     {
         "id": "ChaOIIAOIIAI",
         "rarity": "legendary",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 99,
+        "attack": 55,
+        "defense": 13,
+        "speed": 31
     },
     {
         "id": "ChaOUPIGOUPI",
         "rarity": "rare",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 93,
+        "attack": 47,
+        "defense": 15,
+        "speed": 19
     },
     {
         "id": "Chachakijuge",
         "rarity": "divin",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 125,
+        "attack": 54,
+        "defense": 20,
+        "speed": 21
     },
     {
         "id": "Chachalefou",
         "rarity": "divin",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 119,
+        "attack": 66,
+        "defense": 13,
+        "speed": 30
     },
     {
         "id": "Chafeu",
         "rarity": "basique",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 134,
+        "attack": 35,
+        "defense": 25,
+        "speed": 7
     },
     {
         "id": "Chakidanse",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 90,
+        "attack": 50,
+        "defense": 10,
+        "speed": 23
     },
     {
         "id": "Chakisambiance",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 82,
+        "attack": 50,
+        "defense": 10,
+        "speed": 25
     },
     {
         "id": "Chakidisparait",
         "rarity": "mythic",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 110,
+        "attack": 59,
+        "defense": 14,
+        "speed": 19
     },
     {
         "id": "Chakimange",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 95,
+        "attack": 52,
+        "defense": 12,
+        "speed": 16
     },
     {
         "id": "Chakimusique",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 78,
+        "attack": 52,
+        "defense": 10,
+        "speed": 25
     },
     {
         "id": "Chakipleure",
         "rarity": "mythic",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 96,
+        "attack": 52,
+        "defense": 17,
+        "speed": 24
     },
     {
         "id": "Chakiprendlebain",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 99,
+        "attack": 45,
+        "defense": 19,
+        "speed": 18
     },
     {
         "id": "Chakira",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 74,
+        "attack": 50,
+        "defense": 10,
+        "speed": 29
     },
     {
         "id": "Chakonten",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 74,
+        "attack": 50,
+        "defense": 10,
+        "speed": 29
     },
     {
         "id": "Chakiss",
         "rarity": "mythic",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 104,
+        "attack": 46,
+        "defense": 19,
+        "speed": 21
     },
     {
         "id": "Chanrv",
         "rarity": "mythic",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 104,
+        "attack": 58,
+        "defense": 15,
+        "speed": 21
     },
     {
         "id": "Chapensif",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 120,
+        "attack": 38,
+        "defense": 27,
+        "speed": 10
     },
     {
         "id": "Chapipou",
         "rarity": "basique",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 91,
+        "attack": 45,
+        "defense": 15,
+        "speed": 18
     },
     {
         "id": "Chapluie",
         "rarity": "rare",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 97,
+        "attack": 55,
+        "defense": 14,
+        "speed": 19
     },
     {
         "id": "Chaporte",
         "rarity": "rare",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 103,
+        "attack": 44,
+        "defense": 17,
+        "speed": 17
     },
     {
         "id": "Chasad",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 112,
+        "attack": 63,
+        "defense": 17,
+        "speed": 22
     },
     {
         "id": "Chatrain",
         "rarity": "legendary",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 121,
+        "attack": 57,
+        "defense": 17,
+        "speed": 20
     },
     {
         "id": "Chatriste",
         "rarity": "basique",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 88,
+        "attack": 43,
+        "defense": 15,
+        "speed": 19
     },
     {
         "id": "Kettychokbar",
         "rarity": "divin",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 115,
+        "attack": 61,
+        "defense": 18,
+        "speed": 24
     },
     {
         "id": "Kettysleep",
         "rarity": "divin",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 158,
+        "attack": 40,
+        "defense": 37,
+        "speed": 11
     },
     {
         "id": "Naladies",
         "rarity": "divin",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 158,
+        "attack": 40,
+        "defense": 37,
+        "speed": 11
     },
     {
         "id": "Nalarevives",
         "rarity": "divin",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 125,
+        "attack": 68,
+        "defense": 16,
+        "speed": 21
     },
     {
         "id": "Chabigmac",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 112,
+        "attack": 42,
+        "defense": 18,
+        "speed": 14
     },
     {
         "id": "Chakiflop",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 92,
+        "attack": 42,
+        "defense": 18,
+        "speed": 17
     },
     {
         "id": "Chakiveupaparler",
         "rarity": "basique",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 110,
+        "attack": 35,
+        "defense": 25,
+        "speed": 9
     },
     {
         "id": "Chakisefaitaper",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 90,
+        "attack": 50,
+        "defense": 10,
+        "speed": 23
     },
     {
         "id": "Charip",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 126,
+        "attack": 39,
+        "defense": 27,
+        "speed": 9
     },
     {
         "id": "Chakistalk",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 106,
+        "attack": 46,
+        "defense": 14,
+        "speed": 14
     },
     {
         "id": "Chakiregardelhorizon",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 146,
+        "attack": 38,
+        "defense": 27,
+        "speed": 8
     },
     {
         "id": "Chadescalier",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 92,
+        "attack": 45,
+        "defense": 14,
+        "speed": 15
     },
     {
         "id": "Chakitombe",
         "rarity": "legendary",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 99,
+        "attack": 69,
+        "defense": 11,
+        "speed": 31
     },
     {
         "id": "Chakifail",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 100,
+        "attack": 37,
+        "defense": 20,
+        "speed": 15
     },
     {
         "id": "Chakihurle",
         "rarity": "rare",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 89,
+        "attack": 53,
+        "defense": 11,
+        "speed": 28
     },
     {
         "id": "Chaelectrriicien",
         "rarity": "mythic",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 110,
+        "attack": 47,
+        "defense": 18,
+        "speed": 19
     },
     {
         "id": "Chakisefechier",
         "rarity": "basique",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 120,
+        "attack": 31,
+        "defense": 28,
+        "speed": 8
     },
     {
         "id": "Chakideprime",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 130,
+        "attack": 43,
+        "defense": 24,
+        "speed": 9
     },
     {
         "id": "Chahjevois",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 116,
+        "attack": 55,
+        "defense": 19,
+        "speed": 22
     },
     {
         "id": "Chalix",
         "rarity": "legendary",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 124,
+        "attack": 46,
+        "defense": 25,
+        "speed": 19
     },
     {
         "id": "Chakimeur",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 130,
+        "attack": 43,
+        "defense": 24,
+        "speed": 9
     },
     {
         "id": "Chakivi",
         "rarity": "rare",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 98,
+        "attack": 52,
+        "defense": 15,
+        "speed": 17
     },
     {
         "id": "Chakiremeur",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 130,
+        "attack": 43,
+        "defense": 24,
+        "speed": 9
     },
     {
         "id": "Chakisenva",
         "rarity": "rare",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 103,
+        "attack": 44,
+        "defense": 17,
+        "speed": 17
     },
     {
         "id": "Chakiexplose",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 100,
+        "attack": 37,
+        "defense": 20,
+        "speed": 15
     },
     {
         "id": "Chaclavier",
         "rarity": "basique",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 74,
+        "attack": 50,
+        "defense": 10,
+        "speed": 29
     },
     {
         "id": "Chakigeek",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 100,
+        "attack": 37,
+        "defense": 20,
+        "speed": 15
     },
     {
         "id": "Chakigobe",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 87,
+        "attack": 46,
+        "defense": 14,
+        "speed": 18
     },
     {
         "id": "Chahouilavrraiment",
         "rarity": "mythic",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 110,
+        "attack": 47,
+        "defense": 18,
+        "speed": 19
     },
     {
         "id": "CestLarry",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 95,
+        "attack": 52,
+        "defense": 12,
+        "speed": 16
     },
     {
         "id": "Chakiconduit",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 92,
+        "attack": 42,
+        "defense": 18,
+        "speed": 17
     },
     {
         "id": "Chakibrule",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 121,
+        "attack": 45,
+        "defense": 19,
+        "speed": 14
     },
     {
         "id": "Chasoucanicule",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 100,
+        "attack": 47,
+        "defense": 16,
+        "speed": 15
     },
     {
         "id": "Putiang Sous Drogue",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 109,
+        "attack": 47,
+        "defense": 20,
+        "speed": 16
     },
     {
         "id": "Chadieu",
         "rarity": "rare",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 120,
+        "attack": 38,
+        "defense": 27,
+        "speed": 10
     },
     {
         "id": "Chakivachezlecoiffeur",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 95,
+        "attack": 52,
+        "defense": 12,
+        "speed": 16
     },
     {
         "id": "Chaaris",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 100,
+        "attack": 47,
+        "defense": 16,
+        "speed": 15
     },
     {
         "id": "Chariche",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 108,
+        "attack": 50,
+        "defense": 17,
+        "speed": 16
     },
     {
         "id": "Chakibrasse",
         "rarity": "mythic",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 121,
+        "attack": 50,
+        "defense": 20,
+        "speed": 16
     },
     {
         "id": "Chadelaforet",
         "rarity": "mythic",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 104,
+        "attack": 46,
+        "defense": 19,
+        "speed": 21
     },
     {
         "id": "Chakidecede",
         "rarity": "legendary",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 149,
+        "attack": 38,
+        "defense": 35,
+        "speed": 10
     },
     {
         "id": "Chagression",
         "rarity": "legendary",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 124,
+        "attack": 58,
+        "defense": 19,
+        "speed": 19
     },
     {
         "id": "Chafusee",
         "rarity": "rare",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 115,
+        "attack": 50,
+        "defense": 15,
+        "speed": 15
     },
     {
         "id": "Charetard",
         "rarity": "mythic",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 114,
+        "attack": 49,
+        "defense": 21,
+        "speed": 17
     },
     {
         "id": "Chakiskate",
         "rarity": "rare",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 86,
+        "attack": 48,
+        "defense": 12,
+        "speed": 27
     },
     {
         "id": "Chakipend",
         "rarity": "basique",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 92,
+        "attack": 42,
+        "defense": 18,
+        "speed": 17
     },
     {
         "id": "Chakisexcite",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 103,
+        "attack": 56,
+        "defense": 19,
+        "speed": 25
     },
     {
         "id": "Chakidiesfromcringe",
         "rarity": "basique",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 90,
+        "attack": 40,
+        "defense": 17,
+        "speed": 18
     },
     {
         "id": "Chatuyeau",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 108,
+        "attack": 40,
+        "defense": 21,
+        "speed": 16
     },
     {
         "id": "Chakivasecoucher",
         "rarity": "legendary",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 153,
+        "attack": 41,
+        "defense": 31,
+        "speed": 10
     },
     {
         "id": "Chafou",
         "rarity": "legendary",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 111,
+        "attack": 62,
+        "defense": 12,
+        "speed": 28
     },
     {
         "id": "Chakisattrist",
         "rarity": "mythic",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 96,
+        "attack": 52,
+        "defense": 17,
+        "speed": 24
     },
     {
         "id": "Chakiwat",
         "rarity": "legendary",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 124,
+        "attack": 46,
+        "defense": 25,
+        "speed": 19
     },
     {
         "id": "Chakietrangle",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 97,
+        "attack": 48,
+        "defense": 14,
+        "speed": 16
     },
     {
         "id": "Chatontrist",
         "rarity": "mythic",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 104,
+        "attack": 46,
+        "defense": 19,
+        "speed": 21
     },
     {
         "id": "Chakirealise",
         "rarity": "legendary",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 114,
+        "attack": 52,
+        "defense": 22,
+        "speed": 22
     },
     {
         "id": "Chablablabla",
         "rarity": "rare",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 102,
+        "attack": 48,
+        "defense": 15,
+        "speed": 17
     },
     {
         "id": "Nalastar",
         "rarity": "divin",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 121,
+        "attack": 55,
+        "defense": 24,
+        "speed": 23
     },
     {
         "id": "Kettystretch",
         "rarity": "divin",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 119,
+        "attack": 56,
+        "defense": 19,
+        "speed": 25
     },
     {
         "id": "Kettyparkour",
         "rarity": "divin",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 98,
+        "attack": 66,
+        "defense": 13,
+        "speed": 38
     },
     {
         "id": "Chakicri",
         "rarity": "rare",
-        "type": "Idiot"
+        "type": "Idiot",
+        "hp": 99,
+        "attack": 45,
+        "defense": 19,
+        "speed": 18
     },
     {
         "id": "Chadegueulasse",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 106,
+        "attack": 46,
+        "defense": 14,
+        "speed": 14
     },
     {
         "id": "Chakimark",
         "rarity": "basique",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 95,
+        "attack": 40,
+        "defense": 16,
+        "speed": 16
     },
     {
         "id": "Chakifuck",
         "rarity": "mythic",
-        "type": "Zoomies"
+        "type": "Zoomies",
+        "hp": 89,
+        "attack": 56,
+        "defense": 12,
+        "speed": 28
     },
     {
         "id": "Chakisordelasieste",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 112,
+        "attack": 63,
+        "defense": 17,
+        "speed": 22
     },
     {
         "id": "Chakidepop",
         "rarity": "legendary",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 118,
+        "attack": 50,
+        "defense": 19,
+        "speed": 20
     },
     {
         "id": "Chakisniff",
         "rarity": "mythic",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 114,
+        "attack": 55,
+        "defense": 15,
+        "speed": 20
     },
     {
         "id": "Chakiattend",
         "rarity": "rare",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 101,
+        "attack": 51,
+        "defense": 16,
+        "speed": 20
     },
     {
         "id": "Chakisimpatiente",
         "rarity": "basique",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 110,
+        "attack": 35,
+        "defense": 25,
+        "speed": 9
     },
     {
         "id": "Chakichill",
         "rarity": "mythic",
-        "type": "Flemmard"
+        "type": "Flemmard",
+        "hp": 134,
+        "attack": 42,
+        "defense": 28,
+        "speed": 9
     },
     {
         "id": "Chakisereveil",
         "rarity": "legendary",
-        "type": "Mignon"
+        "type": "Mignon",
+        "hp": 112,
+        "attack": 63,
+        "defense": 17,
+        "speed": 22
     },
     {
         "id": "Chakipete",
         "rarity": "rare",
-        "type": "Etrange"
+        "type": "Etrange",
+        "hp": 99,
+        "attack": 49,
+        "defense": 15,
+        "speed": 17
     }
 ]
